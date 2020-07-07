@@ -149,6 +149,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_mode=0 \
     persist.sys.sf.native_mode=1 \
+    ro.surface_flinger.support_kernel_idle_timer=true \
     ro.vendor.display.sensortype=2 \
     vendor.display.enable_async_powermode=0 \
     vendor.display.qdcm.mode_combine=1 \
