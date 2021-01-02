@@ -40,6 +40,11 @@ PRODUCT_PACKAGES += \
     Tag \
     SecureElement
 
+# Overlays
+PRODUCT_PACKAGES += \
+    UmiFrameworks \
+    UmiSystemUI
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
