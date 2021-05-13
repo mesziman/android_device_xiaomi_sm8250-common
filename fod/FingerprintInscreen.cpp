@@ -21,7 +21,7 @@
 #define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness"
 
 namespace vendor {
-namespace lineage {
+namespace aospa {
 namespace biometrics {
 namespace fingerprint {
 namespace inscreen {
@@ -131,5 +131,5 @@ Return<int32_t> FingerprintInscreen::getSize() {
 }  // namespace inscreen
 }  // namespace fingerprint
 }  // namespace biometrics
-}  // namespace lineage
+}  // namespace aospa
 }  // namespace vendor
