@@ -12,50 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# APEX
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-# Boot
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti.recovery
-
-# Fastboot
-PRODUCT_PACKAGES += \
-    fastbootd
-
-# GSI
-$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
-
-# Init
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-
-# Namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    device/xiaomi/umi
-
-# NFC
-PRODUCT_PACKAGES += \
-    NfcNci \
-    Tag \
-    SecureElement
-
 # Overlays
 PRODUCT_PACKAGES += \
     UmiFrameworks \
     UmiSystemUI
 
-# Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# Update Engine
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
+# Inherit from sm8250-common
+$(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/umi/umi-vendor.mk)
