@@ -28,7 +28,8 @@ SOONG_CONFIG_XIAOMI_KONA_FOD_POS_Y = 1806
 SOONG_CONFIG_XIAOMI_KONA_FOD_SIZE = 197
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/umi_defconfig
+include device/xiaomi/umi-kernel/BoardConfigKernel.mk
+KERNEL_DEFCONFIG := umi_defconfig
 
 # inherit from the proprietary version
 include vendor/xiaomi/umi/BoardConfigVendor.mk
