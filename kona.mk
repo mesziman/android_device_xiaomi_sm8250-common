@@ -252,12 +252,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wlan
 
-# RIL
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full \
-    librmnetctl \
-    libxml2
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
