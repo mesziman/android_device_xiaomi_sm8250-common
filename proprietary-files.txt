@@ -616,6 +616,9 @@ vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
 vendor/etc/elliptic_sensor.xml
 
+# Soter
+-vendor/app/SoterService/SoterService.apk
+
 # Thermal-configs
 vendor/etc/thermal-engine.conf
 vendor/etc/thermal-4k.conf
