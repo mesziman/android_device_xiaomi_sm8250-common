@@ -14,6 +14,7 @@
 
 # Overlays
 PRODUCT_PACKAGES += \
+    AOSPAUmiFrameworks \
     AOSPAUmiSettings \
     AOSPAUmiSystemUI \
     UmiFrameworks \
