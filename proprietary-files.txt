@@ -441,6 +441,9 @@ vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 
+# NVRAM
+vendor/bin/nv_mac
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
