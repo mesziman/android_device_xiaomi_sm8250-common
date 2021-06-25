@@ -12,28 +12,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<compatibility-matrix version="1.0" type="framework">
-    <!-- Fingerprint -->
+<manifest version="1.0" type="device">
+    <!-- AudioHAL ext -->
     <hal format="hidl">
-        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>IGoodixFingerprintDaemon</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.fingerprintextension</name>
+        <name>vendor.qti.hardware.audiohalext</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IXiaomiFingerprint</name>
+            <name>IAudioHalExt</name>
             <instance>default</instance>
         </interface>
     </hal>
-
-    <!-- Infrared -->
+    <!-- Consumer IR -->
     <hal format="hidl">
         <name>android.hardware.ir</name>
         <transport>hwbinder</transport>
@@ -43,7 +33,17 @@
             <instance>default</instance>
         </interface>
     </hal>
-
+    <!-- Fingerprint -->
+    <hal format="hidl">
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
+    </hal>
     <!-- Motor -->
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.motor</name>
@@ -55,18 +55,16 @@
         </interface>
         <fqname>@1.0::IMotor/default</fqname>
     </hal>
-
-    <!-- Secure element -->
+    <!-- Sensors -->
     <hal format="hidl">
-        <name>vendor.xiaomi.hardware.mlipay</name>
+        <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.0</version>
         <interface>
-            <name>IMlipayService</name>
+            <name>ISensors</name>
             <instance>default</instance>
         </interface>
     </hal>
-
     <!-- TouchFeature -->
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.touchfeature</name>
@@ -78,4 +76,4 @@
         </interface>
         <fqname>@1.0::ITouchFeature/default</fqname>
     </hal>
-</compatibility-matrix>
+</manifest>
