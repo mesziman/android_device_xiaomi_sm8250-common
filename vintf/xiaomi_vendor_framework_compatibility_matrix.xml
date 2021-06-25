@@ -78,36 +78,4 @@
             <instance>default</instance>
         </interface>
     </hal>
-
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.batterylife</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBatteryLife</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBatteryLife/default</fqname>
-    </hal>
-
-    <hal format="hidl">
-        <name>vendor.qti.sla.service</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISlaService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISlaService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>com.qualcomm.qti.bluetooth_audio</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBluetoothAudio</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBluetoothAudio/default</fqname>
-    </hal>
 </compatibility-matrix>

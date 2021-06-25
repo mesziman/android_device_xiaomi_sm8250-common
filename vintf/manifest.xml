@@ -191,16 +191,6 @@
         <fqname>@1.0::IOffloadControl/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>com.qualcomm.qti.bluetooth_audio</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBluetoothAudio</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBluetoothAudio/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -608,21 +598,6 @@
         <fqname>@1.0::ISoter/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.trustedui</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITrustedInput</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ITrustedUI</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ITrustedInput/default</fqname>
-        <fqname>@1.0::ITrustedUI/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.tui_comm</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -716,26 +691,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IQspmhal/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.sla.service</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISlaService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISlaService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.batterylife</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBatteryLife</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBatteryLife/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.motor</name>
