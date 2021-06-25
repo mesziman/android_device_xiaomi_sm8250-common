@@ -10,6 +10,7 @@ TARGET_BOARD_PLATFORM := kona
 
 # Overlays
 PRODUCT_PACKAGES += \
+    AOSPAMiKonaSettings \
     MiKonaFrameworks \
     MiKonaSystemUI \
     WifiResTarget
