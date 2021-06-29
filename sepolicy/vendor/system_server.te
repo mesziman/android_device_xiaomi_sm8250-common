@@ -1,3 +1,5 @@
 allow system_server proc_last_kmsg:file r_file_perms;
 
 binder_call(system_server, vendor_fod)
+
+get_prop(system_server, vendor_display_notch_prop)
