@@ -230,7 +230,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     av \
     bt \
-    display \
     gps \
     media-legacy \
     nq-nfc \
@@ -240,6 +239,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
     usb \
     vibrator \
     wlan
+
+ifneq ($(TARGET_HAS_FOD),true)
+TARGET_COMMON_QTI_COMPONENTS += display
+endif
 
 # Rootdir
 PRODUCT_PACKAGES += \
