@@ -13,7 +13,3 @@ allow vendor_fod vendor_sysfs_graphics:file rw_file_perms;
 binder_call(vendor_fod, hal_fingerprint_default)
 allow vendor_fod hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
 
-# Allow binder communication with hal_touchfeature_default
-binder_call(vendor_fod, hal_touchfeature_default)
-allow vendor_fod hal_touchfeature_hwservice_xiaomi:hwservice_manager find;
-
