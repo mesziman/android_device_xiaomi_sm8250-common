@@ -6,5 +6,5 @@ service vendor.fingerprint-inscreen-1-0 /system_ext/bin/hw/vendor.aospa.biometri
     interface vendor.aospa.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
     class hal
     user system
-    group system wakelock
+    group system
     shutdown critical
