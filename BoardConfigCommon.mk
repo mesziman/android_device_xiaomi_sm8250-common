@@ -46,6 +46,16 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x546C00000000
 TARGET_NO_RAW10_CUSTOM_FORMAT := true
+ifeq ($(TARGET_HAS_FOD),true)
+TARGET_USES_FOD_ZPOS := true
+endif
+
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+>>>>>>> 5ae0fbd... sm8250-common: Enable TARGET_USES_FOD_ZPOS for FOD devices
 
 # Fingerprint
 ifeq ($(TARGET_HAS_FOD),true)
