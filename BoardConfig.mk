@@ -33,5 +33,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 # Kernel
 KERNEL_DEFCONFIG := umi_defconfig
 
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # inherit from the proprietary version
 include vendor/xiaomi/umi/BoardConfigVendor.mk
