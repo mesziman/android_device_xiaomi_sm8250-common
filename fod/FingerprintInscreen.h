@@ -1,7 +1,17 @@
 /*
- * Copyright (C) 2019-2021 The LineageOS Project
+ * Copyright (C) 2019-2020 The LineageOS Project
  *
- * SPDX-License-Identifier: Apache-2.0
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 #ifndef VENDOR_AOSPA_BIOMETRICS_FINGERPRINT_INSCREEN_V1_0_FINGERPRINTINSCREEN_H
@@ -28,9 +38,11 @@ using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint
 using ::vendor::xiaomi::hardware::touchfeature::V1_0::ITouchFeature;
 
 class FingerprintInscreen : public IFingerprintInscreen {
-  public:
+public:
     FingerprintInscreen();
-
+    Return<int32_t> getPositionX() override;
+    Return<int32_t> getPositionY() override;
+    Return<int32_t> getSize() override;
     Return<void> onStartEnroll() override;
     Return<void> onFinishEnroll() override;
     Return<void> onPress() override;
@@ -40,17 +52,17 @@ class FingerprintInscreen : public IFingerprintInscreen {
     Return<bool> handleAcquired(int32_t acquiredInfo, int32_t vendorCode) override;
     Return<bool> handleError(int32_t error, int32_t vendorCode) override;
     Return<void> setLongPressEnabled(bool enabled) override;
-    Return<int32_t> getDimAmount(int32_t cur_brightness) override;
+    Return<int32_t> getDimAmount(int32_t brightness) override;
     Return<bool> shouldBoostBrightness() override;
     Return<void> setCallback(const sp<IFingerprintInscreenCallback>& callback) override;
-    Return<int32_t> getPositionX() override;
-    Return<int32_t> getPositionY() override;
-    Return<int32_t> getSize() override;
 
-  private:
-    sp<IDisplayFeature> mXiaomiDisplayFeatureService;
-    sp<ITouchFeature> mTouchFeatureService;
-    sp<IXiaomiFingerprint> mXiaomiFingerprintService;
+private:
+    sp<IDisplayFeature> xiaomiDisplayFeatureService;
+    sp<ITouchFeature> touchFeatureService;
+    sp<IXiaomiFingerprint> xiaomiFingerprintService;
+
+    std::mutex mCallbackLock;
+    sp<IFingerprintInscreenCallback> mCallback;
 };
 
 }  // namespace implementation
