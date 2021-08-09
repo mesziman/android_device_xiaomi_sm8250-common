@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -77,7 +78,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(LOCAL_PATH)/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
+    $(LOCAL_PATH)/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
+    $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
@@ -164,7 +167,6 @@ PRODUCT_PACKAGES += \
 ifeq ($(TARGET_HAS_FOD),true)
 PRODUCT_PACKAGES += \
     vendor.aospa.biometrics.fingerprint.inscreen@1.0-service \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
     FODService
 
 PRODUCT_COPY_FILES += \
@@ -172,6 +174,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_PACKAGES += \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_kona
 
 PRODUCT_PACKAGES += \
@@ -204,9 +207,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
     libOmxAmrEnc \
+    libOmxSwVencMpeg4 \
     libOmxEvrcEnc \
     libOmxG711Enc \
-    libOmxQcelp13Enc
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVenc \
+    libOmxVidEnc \
+    libOmxSwVdec \
+    libOmxSwVencMpeg4 \
+    libstagefrighthw \
+    libc2dcolorconvert \
+    liblasic
 
 # Paranoid Doze
 PRODUCT_PACKAGES += \
@@ -239,9 +252,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wlan
 
-ifneq ($(TARGET_HAS_FOD),true)
-TARGET_COMMON_QTI_COMPONENTS += display
-endif
+#TARGET_COMMON_QTI_COMPONENTS += display
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -309,5 +320,29 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/permissions/hotword-hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hotword-hiddenapi-package-allowlist.xml
+
+
+-include hardware/qcom/display/config/display-board.mk
+-include hardware/qcom/display/config/display-product.mk
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
+include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk
+include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
+endif
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+
+# Packages
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.qti \
+    libqdutils \
+    libqservice \
+    libtinyxml \
+    lights.qcom
+
+# Get non-open-source specific aspects.
+$(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
