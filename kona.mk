@@ -41,7 +41,9 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio@2.0-impl
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
+    android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -174,7 +176,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_PACKAGES += \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \ 
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_kona
 
 PRODUCT_PACKAGES += \
