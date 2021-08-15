@@ -146,7 +146,7 @@ vendor/etc/init/ssgtzd.rc
 vendor/lib64/libminksocket.so
 
 # Consumer IR
-vendor/lib64/hw/consumerir.default.so
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.kona.so
 
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
