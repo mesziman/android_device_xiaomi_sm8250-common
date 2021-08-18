@@ -179,6 +179,10 @@ PRODUCT_PACKAGES += \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
    # android.hardware.biometrics.fingerprint@2.1-service.xiaomi_kona
 
+# Force triple frame buffers
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor \
     vendor.xiaomi.hardware.touchfeature@1.0.vendor
