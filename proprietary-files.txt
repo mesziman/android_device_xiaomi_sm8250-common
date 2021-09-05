@@ -139,7 +139,7 @@ vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
-# Connection Security - LA.UM.9.12.r1-10800-SMxx50.0
+# Connection Security - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/ssgqmigd
 vendor/bin/ssgtzd
 vendor/etc/init/ssgtzd.rc
@@ -252,12 +252,12 @@ vendor/firmware/a650_zap.b02
 vendor/firmware/a650_zap.elf
 vendor/firmware/a650_zap.mdt
 
-# GPS - LA.UM.9.12.r1-10800-SMxx50.0.
+# GPS - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/mlid
-vendor/bin/slim_daemon
+vendor/bin/slim_daemon|46cc6ab22c7111f472fc9c9ec4d410f8c9f99cdc
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
@@ -271,6 +271,7 @@ vendor/etc/sec_config
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
+vendor/lib64/libaoa.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
 vendor/lib64/libasn1crtx.so
@@ -288,7 +289,6 @@ vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_socket.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
-vendor/lib64/liblocdiagiface.so|31f88106b5aeceff4264f06ce5299455c3058499
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libqcc_file_agent.so
@@ -392,7 +392,7 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 
-# MDM - LA.UM.9.12.r1-10800-SMxx50.0
+# MDM - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/mdm_helper_proxy
@@ -436,7 +436,7 @@ vendor/etc/libnfc-mtp-SN100.conf
 vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
 vendor/lib/libsn100u_fw.so
 
-# PD - LA.UM.9.12.r1-10800-SMxx50.0
+# PD - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
@@ -466,7 +466,7 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
-# QDMA - LA.UM.9.12.r1-10800-SMxx50.0
+# QDMA - LA.UM.9.12.r1-11500-SMxx50.0
 -vendor/app/QCC-TR-UI/QCC-TR-UI.apk
 vendor/bin/qcc-trd
 vendor/etc/init/init.qdmastats.rc
@@ -512,14 +512,14 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
-# QSPM HAL - LA.UM.9.12.r1-10800-SMxx50.0
+# QSPM HAL - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 
-# RemoteFS - LA.UM.9.12.r1-10800-SMxx50.0
+# RemoteFS - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/rmt_storage
 vendor/etc/init/vendor.qti.rmt_storage.rc
 
@@ -630,7 +630,7 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Soter service (Tencent) - from lmi-user 11 RKQ1.200826.002 V12.5.1.0.RJKMIXM release-keys
 -vendor/app/SoterService/SoterService.apk|939423f0016034cf8676f64d384aafde308f779b
 
-# TFTP - LA.UM.9.12.r1-10800-SMxx50.0
+# TFTP - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
