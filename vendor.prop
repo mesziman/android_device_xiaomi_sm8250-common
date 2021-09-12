@@ -226,3 +226,4 @@ ro.surface_flinger.has_HDR_display=true
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
