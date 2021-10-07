@@ -264,7 +264,11 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wlan
 
+
 #TARGET_COMMON_QTI_COMPONENTS += display
+# Display
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # Rootdir
 PRODUCT_PACKAGES += \
