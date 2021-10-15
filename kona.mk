@@ -166,11 +166,7 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.sf.native_mode=2 \
     ro.vendor.display.sensortype=2 \
-    vendor.display.enable_async_powermode=0 \
-    vendor.display.qdcm.disable_factory_mode=1 \
-    vendor.display.qdcm.mode_combine=1 \
     vendor.display.use_layer_ext=1
 
 PRODUCT_PACKAGES += \
@@ -347,6 +343,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
@@ -426,15 +423,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=4 \
     dalvik.vm.image-dex2oat-threads=4
 
-# Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.sf.color_mode=0 \
-    persist.sys.sf.native_mode=1 \
-    ro.vendor.display.sensortype=2 \
-    vendor.display.enable_async_powermode=0 \
-    vendor.display.qdcm.mode_combine=1 \
-    vendor.display.use_layer_ext=0 \
-    vendor.display.use_smooth_motion=0
 
 
 # Get non-open-source specific aspects.
