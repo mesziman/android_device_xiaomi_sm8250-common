@@ -100,8 +100,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     vendor/qcom/opensource/audio-hal/primary-hal/configs/common/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml
 
+# Authsecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0.vendor
+
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth@1.0.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
@@ -170,9 +176,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.qdcm.mode_combine=1 \
     vendor.display.use_layer_ext=1
 
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.common-V1-ndk_platform \
+    android.hardware.graphics.common-V1-ndk_platform.vendor \
+
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.clearkey
+    android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.4-service.clearkey
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -191,6 +202,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0 \
+    android.hardware.gatekeeper@1.0.vendor
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.gatekeeper.disable_spu=true
+
+# GPS
+LOC_HIDL_VERSION = 4.0
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
@@ -207,9 +230,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
 
+# IFAA manager
+#PRODUCT_PACKAGES += \
+    org.ifaa.android.manager
+
+#PRODUCT_BOOT_JARS += \
+#    org.ifaa.android.manager
+
+# Keymaster
+PRODUCT_PACKAGES += \
+   android.hardware.keymaster@4.1 \
+   android.hardware.keymaster@4.1.vendor
+
 # Netflix
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q8250-19134-1
+
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor \
+
+# Neural networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -251,6 +294,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     gps \
+    display \
     media-legacy \
     nq-nfc \
     overlay \
@@ -265,6 +309,19 @@ TARGET_COMMON_QTI_COMPONENTS := \
 # Display
 PRODUCT_PACKAGES += \
     disable_configstore
+
+# QTI Trusted UI
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0.vendor \
+
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    android.system.net.netd@1.1 \
+    android.system.net.netd@1.1.vendor
 
 # Rootdir
 PRODUCT_PACKAGES += \
