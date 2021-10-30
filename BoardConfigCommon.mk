@@ -67,6 +67,9 @@ DEVICE_MANIFEST_FILE += \
 
 DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
 
+# Hacks
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Kernel
 ifeq ($(PRODUCT_VIRTUAL_AB_OTA),true)
 BOARD_BOOT_HEADER_VERSION := 3
