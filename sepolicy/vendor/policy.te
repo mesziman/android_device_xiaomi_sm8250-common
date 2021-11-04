@@ -1,0 +1,10 @@
+
+
+#============= cameraserver ==============
+allow cameraserver nfc_service:service_manager find;
+
+#============= gmscore_app ==============
+allow gmscore_app vendor_hal_perf_hwservice:hwservice_manager find;
+
+#============= priv_app ==============
+#allow priv_app default_android_service:service_manager find;
