@@ -1,7 +1,8 @@
 # Audio
+av.offload.enable=true
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
-aaudio.mmap_policy=2
+aaudio.mmap_policy=1
 audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
 persist.audio.button_jack.profile=volume
@@ -61,7 +62,7 @@ ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
 ro.vendor.audio.voice.volume.boost=none
 tunnel.audio.encode=true
-vendor.audio.adm.buffering.ms=2
+vendor.audio.adm.buffering.ms=6
 vendor.audio.capture.enforce_legacy_copp_sr=true
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
@@ -111,7 +112,7 @@ vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.output.suspend.supported=false
 vendor.audio.hw.aac.encoder=true
 vendor.audio.mic.status=off
-vendor.audio.offload.buffer.size.kb=256
+vendor.audio.offload.buffer.size.kb=32
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.offload.multiaac.enable=true
 vendor.audio.offload.multiple.enabled=false
@@ -166,7 +167,7 @@ persist.backup.ntpServer=0.pool.ntp.org
 ro.hardware.keystore_desede=true
 
 # Media
-debug.stagefright.ccodec=4
+debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 
 # NFC
@@ -211,6 +212,10 @@ rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.com.android.dataroaming=false
 persist.vendor.ims.disableADBLogs=1
 persist.vendor.ims.disableIMSLogs=1
+
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.NO_STAPA=1
+
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
 
@@ -226,4 +231,16 @@ ro.surface_flinger.has_HDR_display=true
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+# media
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+#sf
+debug.sf.enable_gl_backpressure=1
 
+ro.vendor.nfc.repair=1
+ro.vendor.se.type=eSE,HCE,UICC
