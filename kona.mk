@@ -28,9 +28,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Atrace
 PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service
+    android.hardware.atrace@1.0-service \
+    libmedia_jni_shim
 
-
+PRODUCT_CHARACTERISTICS := nosdcard
 LOC_HIDL_VERSION = 4.0
 
 # Attestation
@@ -84,7 +85,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
-    $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+    $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf
 
 
 PRODUCT_COPY_FILES += \
@@ -126,11 +128,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=hastings
 
 # Camera
+#PRODUCT_PACKAGES += \
+#    android.hardware.camera.provider@2.4-impl \
+#    android.hardware.camera.provider@2.4-service_64 \
+
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
     libstdc++.vendor \
+    libxml2 \
+    libdng_sdk.vendor \
+    vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
