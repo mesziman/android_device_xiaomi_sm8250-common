@@ -205,8 +205,9 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-service \
+    android.hardware.health.storage@1.0-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -366,6 +367,19 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     lights.qcom
 
+
+PRODUCT_PACKAGES += \
+    vndk_package
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.ab-ota=speed-profile \
+    dalvik.vm.dexopt.secondary=true \
+    ro.vendor.qti.am.reschedule_service=true \
+    pm.dexopt.install=speed-profile \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=4 \
+    dalvik.vm.image-dex2oat-threads=4
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
 # Inherit the proprietary files
