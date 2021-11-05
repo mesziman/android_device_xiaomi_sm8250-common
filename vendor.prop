@@ -260,6 +260,11 @@ persist.vendor.btsatck.absvolfeature=true
 ro.bluetooth.emb_wp_mode=false
 ro.bluetooth.wipower=false
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8250
+
+
 #
 #snapdragon value add features
 #
