@@ -5355,7 +5355,7 @@ case "$target" in
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 	# configure input boost settings
-	echo "0:1612800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+	echo "0:1324800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 	echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
 	# configure governor settings for gold cluster
