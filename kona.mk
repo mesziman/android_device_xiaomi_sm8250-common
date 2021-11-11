@@ -390,7 +390,7 @@ PRODUCT_PACKAGES += \
 #PRODUCT_BOOT_JARS += \
 #    WfdCommon
 
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/permissions/hotword-hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hotword-hiddenapi-package-allowlist.xml
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/permissions/google-hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google-hiddenapi-package-allowlist.xml
 
 
 -include hardware/qcom/display/config/display-board.mk
@@ -425,6 +425,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.boot-dex2oat-threads=8 \
     dalvik.vm.dex2oat-threads=4 \
     dalvik.vm.image-dex2oat-threads=4
+
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.sf.color_mode=0 \
+    persist.sys.sf.native_mode=1 \
+    ro.vendor.display.sensortype=2 \
+    vendor.display.enable_async_powermode=0 \
+    vendor.display.qdcm.mode_combine=1 \
+    vendor.display.use_layer_ext=0 \
+    vendor.display.use_smooth_motion=0
+
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
 # Inherit the proprietary files
