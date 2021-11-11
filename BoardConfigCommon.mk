@@ -140,9 +140,9 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_PREBUILT_CAMERA_SERVICE := true
 TARGET_USES_MEDIA_EXTENSIONS := true
-TARGET_LD_SHIM_LIBS := \
+#TARGET_LD_SHIM_LIBS := \
     system/lib/libcameraservice.so|libmedia_jni_shim.so
-PRODUCT_SOONG_NAMESPACES += \
+#PRODUCT_SOONG_NAMESPACES += \
     frameworks/av/camera/cameraserver \
     frameworks/av/services/camera/libcameraservice
 # Power
