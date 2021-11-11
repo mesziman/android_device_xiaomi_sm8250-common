@@ -242,9 +242,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q8250-19134-1
 
-# Net
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor \
 
 # Neural networks
 PRODUCT_PACKAGES += \
