@@ -25,8 +25,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Atrace
 PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service \
-    libmedia_jni_shim
+    android.hardware.atrace@1.0-service 
+
+#PRODUCT_PACKAGES += libmedia_jni_shim
 
 PRODUCT_CHARACTERISTICS := nosdcard
 LOC_HIDL_VERSION = 4.0
@@ -116,8 +117,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
     persist.vendor.bt.aac_frm_ctl.enabled=true \
     persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
-    persist.vendor.oneplus.bt.asd.chain=0 \
-    persist.vendor.oneplus.bt.asd.firmware=false \
     persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
     persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
@@ -144,7 +143,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    camera.disable_zsl_mode=true
+    camera.disable_zsl_mode=true \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -165,9 +165,19 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # Display
-PRODUCT_PROPERTY_OVERRIDES += \
+#PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.sensortype=2 \
     vendor.display.use_layer_ext=1
+ # Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.sf.color_mode=0 \
+    persist.sys.sf.native_mode=1 \
+    ro.surface_flinger.support_kernel_idle_timer=true \
+    ro.vendor.display.sensortype=2 \
+    vendor.display.enable_async_powermode=0 \
+    vendor.display.qdcm.mode_combine=1 \
+    vendor.display.use_layer_ext=0 \
+    vendor.display.use_smooth_motion=0
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk_platform \
@@ -192,7 +202,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # Force triple frame buffers
-PRODUCT_PROPERTY_OVERRIDES += \
+#PRODUCT_PROPERTY_OVERRIDES += \
      ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 PRODUCT_COPY_FILES += \
@@ -213,8 +223,7 @@ LOC_HIDL_VERSION = 4.0
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
-    android.hardware.health@2.1-service \
-    android.hardware.health.storage@1.0-service
+    android.hardware.health@2.1-service 
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -390,27 +399,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/permissions/google-hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google-hiddenapi-package-allowlist.xml
 
 
--include hardware/qcom/display/config/display-board.mk
--include hardware/qcom/display/config/display-product.mk
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk
-include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
-endif
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
-# Packages
-PRODUCT_PACKAGES += \
-    android.hardware.lights-service.qti \
-    libqdutils \
-    libqservice \
-    libtinyxml \
-    lights.qcom
-
-
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vndk_package
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -426,6 +419,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
+#$(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
