@@ -130,9 +130,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=hastings
 
 # Camera
-#PRODUCT_PACKAGES += \
-#    android.hardware.camera.provider@2.4-impl \
-#    android.hardware.camera.provider@2.4-service_64 \
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service_64 \
 
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
@@ -202,7 +202,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # Force triple frame buffers
-#PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES += \
      ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 PRODUCT_COPY_FILES += \
@@ -222,7 +222,7 @@ LOC_HIDL_VERSION = 4.0
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service 
 
 # HIDL
@@ -314,7 +314,7 @@ PRODUCT_PACKAGES += \
 
 # QTI Trusted UI
 PRODUCT_PACKAGES += \
-    android.hidl.memory.block@1.0.vendor \
+    android.hidl.memory.block@1.0.vendor
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -389,7 +389,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wlan/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
 
 # WiFi Display
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
