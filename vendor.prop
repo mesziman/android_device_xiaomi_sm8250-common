@@ -1,5 +1,0 @@
-ro.hardware.fp.fod=true
-ro.hardware.fp.vendor=goodix_fod,fpc_fod
-persist.vendor.sys.fp.fod.location.X_Y=441,1808
-persist.vendor.sys.fp.fod.size.width_height=197,197
-persist.vendor.sys.fp.expolevel=0x80
