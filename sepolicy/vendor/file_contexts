@@ -10,6 +10,7 @@
 /dev/drv8846_dev                                                        u:object_r:motor_device:s0
 /dev/ti-drv8846                                                         u:object_r:motor_device:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service              u:object_r:hal_motor_default_exec:s0
+/vendor/(lib64)?/libipebpsstriping\.so                      u:object_r:same_process_hal_file:s0
 
 # Charger
 /vendor/bin/batterysecret                                               u:object_r:batterysecret_exec:s0
