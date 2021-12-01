@@ -261,6 +261,10 @@ ro.bluetooth.wipower=false
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
 
+vendor.audio.spkcal.copy.inhal=true
+
+# System
+persist.sys.binary_xml=false
 
 #
 #snapdragon value add features
