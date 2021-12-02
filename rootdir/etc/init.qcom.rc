@@ -489,6 +489,13 @@ on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
     #Enable UFS clock scaling back
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
+    write /dev/sys/block/bootdevice/clkgate_enable 1
+
+    # Tune VM Settings
+    write /proc/sys/vm/vfs_cache_pressure 75
+    write /proc/sys/vm/dirty_ratio 75
+    write /proc/sys/vm/dirty_background_ratio 75
+
     #Reset read ahead for dm-0 and dm-1 to 512kb
     # Runtime fs tuning
     write /sys/block/sda/queue/read_ahead_kb 128
