@@ -21,7 +21,7 @@ BUILD_BROKEN_DUP_RULES := true
 
 # Display
 TARGET_SCREEN_DENSITY := 440
-
+AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := true
 # Fingerprint
 # Gestures
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
