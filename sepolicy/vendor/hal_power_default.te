@@ -18,7 +18,8 @@ allow hal_power_default {
   sysfs_graphics
   sysfs_kgsl
   sysfs_msm_subsys
-  sysfs_scsi_host 
+  sysfs_scsi_host
+  sysfs_mmc_host
   sysfs_touchpanel
 }:{
   file

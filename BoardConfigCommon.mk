@@ -194,6 +194,7 @@ BOARD_SEPOLICY_M4DEFS += \
     sysfs_fingerprint=vendor_sysfs_fingerprint \
     sysfs_graphics=vendor_sysfs_graphics \
     sysfs_kgsl=vendor_sysfs_kgsl \
+    sysfs_mmc_host=vendor_sysfs_mmc_host \
     sysfs_scsi_host=vendor_sysfs_scsi_host \
     sysfs_ssr=vendor_sysfs_ssr \
     sysfs_usb_supply=vendor_sysfs_usb_supply \

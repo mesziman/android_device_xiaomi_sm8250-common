@@ -38,7 +38,7 @@ genfscon sysfs /touchpanel                                                      
 
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable               u:object_r:sysfs_scsi_host:s0
-
+genfscon sysfs /mmc_host/mmc0/clk_scaling/enable                                u:object_r:sysfs_mmc_host:s0
 # Wakeup source stats
 genfscon sysfs /devices/0306_02.01.00/wakeup                                                                                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/goodix_ts.0/wakeup                                                                                                u:object_r:sysfs_wakeup:s0

@@ -5,6 +5,13 @@ allow cameraserver nfc_service:service_manager find;
 
 #============= gmscore_app ==============
 allow gmscore_app vendor_hal_perf_hwservice:hwservice_manager find;
+dontaudit gmscore_app adsprpcd_file:filesystem getattr;
+dontaudit gmscore_app firmware_file:filesystem getattr;
+dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager find;
 
+binder_call(gmscore_app, hal_memtrack_default); 
 #============= priv_app ==============
 #allow priv_app default_android_service:service_manager find;
+
+
+allow vendor_hal_perf_default system_server:dir r_dir_perms;
