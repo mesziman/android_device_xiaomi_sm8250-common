@@ -16,6 +16,8 @@ PRODUCT_PACKAGES += \
     MiKonaSystemUI \
     WifiResTarget
 
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
@@ -171,7 +173,7 @@ PRODUCT_COPY_FILES += \
  # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_mode=0 \
-    persist.sys.sf.native_mode=2 \
+    persist.sys.sf.native_mode=0 \
     ro.surface_flinger.support_kernel_idle_timer=true \
     ro.vendor.display.sensortype=2 \
     vendor.display.enable_async_powermode=0 \
@@ -412,16 +414,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 
 # Surfaceflinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.enable_layer_caching=true
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.layer_caching_active_layer_timeout_ms=1000
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.use_phase_offsets_as_durations=1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.late.sf.duration=10500000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.late.app.duration=20500000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.early.sf.duration=16000000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.early.app.duration=16500000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.earlyGl.sf.duration=13500000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=21000000
 # Get non-open-source specific aspects.
 #$(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
 # Inherit the proprietary files
