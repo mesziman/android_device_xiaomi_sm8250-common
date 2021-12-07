@@ -48,6 +48,7 @@ TARGET_SUPPORTS_64_BIT_APPS := true
 # Display
 #TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x546C00000000
 TARGET_NO_RAW10_CUSTOM_FORMAT := true
+TARGET_USES_VULKAN := true
 
 # Fingerprint
 ifeq ($(TARGET_HAS_FOD),true)
@@ -194,6 +195,7 @@ BOARD_SEPOLICY_M4DEFS += \
     sysfs_fingerprint=vendor_sysfs_fingerprint \
     sysfs_graphics=vendor_sysfs_graphics \
     sysfs_kgsl=vendor_sysfs_kgsl \
+    sysfs_fod=vendor_sysfs_fod \
     sysfs_mmc_host=vendor_sysfs_mmc_host \
     sysfs_scsi_host=vendor_sysfs_scsi_host \
     sysfs_ssr=vendor_sysfs_ssr \
