@@ -13,6 +13,8 @@
 # limitations under the License.
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-pa
+
 PRODUCT_PACKAGES += \
     AOSPAUmiFrameworks \
     AOSPAUmiSettings \
