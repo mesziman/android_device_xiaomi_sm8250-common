@@ -266,6 +266,11 @@ vendor.audio.spkcal.copy.inhal=true
 # System
 persist.sys.binary_xml=false
 
+ro.hwui.use_vulkan=true
+ro.hardware.vulkan=adreno
+graphics.gpu.profiler.support=true
+renderthread.skia.reduceopstasksplitting=true
+debug.hwui.renderer=skiavk
 #
 #snapdragon value add features
 #
