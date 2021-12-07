@@ -1,6 +1,6 @@
 #####################################
 # hal_attribute_pa(hal_name)
-define(`hal_attribute_pa', `
+define(`hal_attribute_aospa', `
 attribute hal_$1;
 expandattribute hal_$1 true;
 attribute hal_$1_client;
