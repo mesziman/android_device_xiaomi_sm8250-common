@@ -381,6 +381,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.mi.btmac.sh \
     fstab.qcom \
     ueventd.qcom.rc
 
