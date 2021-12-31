@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += libmedia_jni_shim
 
 PRODUCT_CHARACTERISTICS := nosdcard
-LOC_HIDL_VERSION = 4.0
 
 # Attestation
 PRODUCT_COPY_FILES += \
@@ -219,9 +218,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gatekeeper.disable_spu=true
 
-# GPS
-LOC_HIDL_VERSION = 4.0
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
@@ -297,7 +293,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     av \
     bt \
-    gps \
     display \
     media-legacy \
     nq-nfc \
@@ -308,6 +303,21 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wlan
 
+
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.1.vendor
+
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
+    $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
+    $(LOCAL_PATH)/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+    $(LOCAL_PATH)/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+    $(LOCAL_PATH)/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+    $(LOCAL_PATH)/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
+    $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf 
 
 #TARGET_COMMON_QTI_COMPONENTS += display
 # Display
