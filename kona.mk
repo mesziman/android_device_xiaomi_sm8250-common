@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += libmedia_jni_shim
 
 PRODUCT_CHARACTERISTICS := nosdcard
-
+LOC_HIDL_VERSION = 4.0
 # Attestation
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
@@ -294,6 +294,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
+    gps \
     media-legacy \
     nq-nfc \
     overlay \
@@ -302,12 +303,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     usb \
     vibrator \
     wlan
-
-
-# GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.1.vendor
 
 
 PRODUCT_COPY_FILES += \
@@ -327,6 +322,8 @@ PRODUCT_PACKAGES += \
 # QTI Trusted UI
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
+
+PRODUCT_PACKAGES += libwpa_client
 
 # RIL
 PRODUCT_PACKAGES += \
