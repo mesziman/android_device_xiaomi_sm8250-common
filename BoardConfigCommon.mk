@@ -204,7 +204,7 @@ BOARD_SEPOLICY_M4DEFS += \
     wifi_vendor_data_file=vendor_wifi_vendor_data_file
 
 
-SELINUX_IGNORE_NEVERALLOWS := true
+#SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
 BOARD_VNDK_VERSION := current

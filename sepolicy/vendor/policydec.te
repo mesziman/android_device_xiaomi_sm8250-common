@@ -1,7 +1,7 @@
 
 
 #============= fsck ==============
-allow fsck block_device:blk_file { read write };
+#allow fsck block_device:blk_file { read write };
 
 #============= hal_camera_default ==============
 allow hal_camera_default default_prop:file read;
@@ -16,8 +16,8 @@ allow hal_health_default sysfs_wireless_supply:dir search;
 allow hal_sensors_default default_prop:file read;
 
 #============= init ==============
-allow init system_file:dir relabelfrom;
-allow init system_file:file relabelfrom;
+#allow init system_file:dir relabelfrom;
+#allow init system_file:file relabelfrom;
 
 #============= mediacodec ==============
 allow mediacodec vendor_audio_prop:file read;
@@ -32,7 +32,7 @@ allow platform_app nfc_service:service_manager find;
 allow rild default_prop:file read;
 
 #============= surfaceflinger ==============
-allow surfaceflinger default_android_service:service_manager find;
+#allow surfaceflinger default_android_service:service_manager find;
 
 #============= system_server ==============
 allow system_server vendor_default_prop:file read;
