@@ -263,7 +263,7 @@ ro.bluetooth.emb_wp_mode=false
 ro.bluetooth.wipower=false
 
 # SoC
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=SM8250
 
 vendor.audio.spkcal.copy.inhal=true
