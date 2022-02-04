@@ -678,6 +678,8 @@ function configure_zram_parameters() {
         let zRamSizeMB=4096
     fi
 
+    echo lz4 > /sys/block/zram0/comp_algorithm
+
     if [ "$low_ram" == "true" ]; then
         echo lz4 > /sys/block/zram0/comp_algorithm
     fi
@@ -782,8 +784,9 @@ if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$Produc
       # Enable ZRAM
       configure_zram_parameters
       configure_read_ahead_kb_values
+      echo 160 > /proc/sys/vm/swappiness
+      echo 60 > /proc/sys/vm/direct_swappiness
       echo 0 > /proc/sys/vm/page-cluster
-      echo 100 > /proc/sys/vm/swappiness
 else
     arch_type=`uname -m`
 
@@ -5335,8 +5338,8 @@ case "$target" in
 	# cpuset parameters
         echo 0-1     > /dev/cpuset/background/cpus
         echo 0-3     > /dev/cpuset/system-background/cpus
-        echo 5-6     > /dev/cpuset/foreground/boost/cpus
-        echo 0-3,5-6 > /dev/cpuset/foreground/cpus
+        echo 4-7     > /dev/cpuset/foreground/boost/cpus
+        echo 0-2,4-7 > /dev/cpuset/foreground/cpus
         echo 0-7     > /dev/cpuset/top-app/cpus
         echo 0-3     > /dev/cpuset/restricted/cpus
 	# Turn off scheduler boost at the end
@@ -5356,7 +5359,7 @@ case "$target" in
 
 	# configure input boost settings
 	echo "0:1324800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
-	echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+	echo 40 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
@@ -5458,6 +5461,7 @@ case "$target" in
         setprop vendor.dcvs.prop 0
 	setprop vendor.dcvs.prop 1
     echo N > /sys/module/lpm_levels/parameters/sleep_disabled
+    echo 156 > /proc/sys/kernel/sched_min_task_util_for_colocation
     configure_memory_parameters
     ;;
 esac
