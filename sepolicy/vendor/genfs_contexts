@@ -36,6 +36,17 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.q
 # Touchpanel
 genfscon sysfs /touchpanel                                                      u:object_r:sysfs_touchpanel:s0
 
+
+
+# Power_supply
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0055/power_supply                                                            u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0034/884000.i2c:qcom,smb1396@34:qcom,div2_cp/power_supply                    u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0066/power_supply/bq2597x-standalone                                         u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/888000.i2c/i2c-5/5-0055/power_supply/lionsemi                                                   u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/888000.i2c/i2c-5/5-0061/power_supply/rx1619                                                     u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify                                                      u:object_r:vendor_sysfs_battery_supply:s0
+ 
+
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable               u:object_r:sysfs_scsi_host:s0
 genfscon sysfs /mmc_host/mmc0/clk_scaling/enable                                u:object_r:sysfs_mmc_host:s0

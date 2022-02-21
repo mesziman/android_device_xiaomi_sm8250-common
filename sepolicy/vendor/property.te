@@ -13,5 +13,8 @@ vendor_internal_prop(power_prop)
 # Thermal
 vendor_internal_prop(thermal_normal_prop)
 
+
 # Touchfeature
 vendor_public_prop(vendor_touchfeature_prop)
+
+vendor_public_prop(vendor_ro_camera_prop)
