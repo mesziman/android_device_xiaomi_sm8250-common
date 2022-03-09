@@ -241,7 +241,6 @@ media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
 #sf
-debug.sf.enable_gl_backpressure=1
 
 ro.vendor.nfc.repair=1
 ro.vendor.se.type=eSE,HCE,UICC
@@ -266,8 +265,6 @@ ro.soc.model=SM8250
 
 vendor.audio.spkcal.copy.inhal=true
 
-# System
-persist.sys.binary_xml=false
 
 ro.hwui.use_vulkan=true
 ro.hardware.vulkan=adreno
