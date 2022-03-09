@@ -423,4 +423,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Get non-open-source specific aspects.
 #$(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
