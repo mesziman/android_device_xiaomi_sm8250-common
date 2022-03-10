@@ -11,6 +11,12 @@ ifneq ($(filter alioth apollon cas cmi lmi thyme umi,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
+# Symlinks
+CNE_SYMLINKS := $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/
+$(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@rm -rf $@
+	@mkdir -p $(dir $@)/vendor/lib64
+	$(hide) ln -sf /vendor/lib64/libvndfwk_detect_jni.qti.so $@/libvndfwk_detect_jni.qti.so
 
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.
@@ -151,7 +157,7 @@ $(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
-ALL_DEFAULT_INSTALLED_MODULES += $(RFS_APQ_GNSS_SYMLINKS) $(RFS_MDM_ADSP_SYMLINKS) $(RFS_MDM_CDSP_SYMLINKS) $(RFS_MDM_MPSS_SYMLINKS) $(RFS_MDM_SLPI_SYMLINKS) $(RFS_MDM_TN_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_CDSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES +=  $(CNE_SYMLINKS) $(RFS_APQ_GNSS_SYMLINKS) $(RFS_MDM_ADSP_SYMLINKS) $(RFS_MDM_CDSP_SYMLINKS) $(RFS_MDM_MPSS_SYMLINKS) $(RFS_MDM_SLPI_SYMLINKS) $(RFS_MDM_TN_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_CDSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS)
 
 WLAN_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld
 $(WLAN_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
