@@ -188,6 +188,15 @@ persist.radio.snapshot_timer=0
 persist.rcs.otp_sms_port=0
 persist.rcs.supported=1
 persist.vendor.data.iwlan.enable=true
+
+# Netmgr
+persist.data.df.dev_name=rmnet_usb0
+persist.data.netmgrd.qos.enable=true
+persist.data.wda.enable=true
+persist.rmnet.data.enable=true
+persist.vendor.data.iwlan.enable=true
+ro.vendor.use_data_netmgrd=true
+
 persist.vendor.radio.5g_mode_pref=1
 persist.vendor.radio.arfcn_test_mode=3
 persist.vendor.radio.bar_fake_gcell=1
