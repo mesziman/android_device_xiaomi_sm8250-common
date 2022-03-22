@@ -34,3 +34,4 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # inherit from the proprietary version
 include vendor/xiaomi/umi/BoardConfigVendor.mk
+include vendor/xiaomi/umi-wfd/BoardConfigVendor.mk
