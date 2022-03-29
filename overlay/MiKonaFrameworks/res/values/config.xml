@@ -98,6 +98,21 @@
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
 
+    <!-- Power Management: Specifies whether to decouple the interactive state of the
+         device from the display on/off state.
+         When false, setInteractive(..., true) will be called before the display is turned on
+         and setInteractive(..., false) will be called after the display is turned off.
+         This mode provides best compatibility for devices that expect the interactive
+         state to be tied to the display state.
+         When true, setInteractive(...) will be called independently of whether the display
+         is being turned on or off.  This mode enables the power manager to reduce
+         clocks and disable the touch controller while the display is on.
+         This resource should be set to "true" when a doze component has been specified
+         to maximize power savings but not all devices support it.
+         Refer to power.h for details.
+    -->
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
@@ -158,19 +173,25 @@
     <!-- Operating volatage for bluetooth controller. 0 by default-->
     <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
 
-    <!-- Vibrator pattern for feedback about a long screen/key press -->
+    <!-- The default intensity level for haptic feedback. See Settings.System.HAPTIC_FEEDBACK_INTENSITY
+         for more details on the constant values and meanings. -->
+    <integer name="config_defaultHapticFeedbackIntensity">3</integer>
+
+    <!-- Vibrator pattern for feedback about a long screen/key press. -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>10</item>
+        <item>12</item>
+        <item>7</item>
     </integer-array>
 
-    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <!-- Vibrator pattern for feedback about touching a virtual key. -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>10</item>
+        <item>12</item>
+        <item>7</item>
     </integer-array>
 
-    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
+    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap. -->
     <integer-array name="config_keyboardTapVibePattern">
         <item>10</item>
     </integer-array>
@@ -303,5 +324,5 @@
     <string name="config_geocoderProviderPackageName" translatable="false">com.qualcomm.location</string>
     <string name="config_comboNetworkLocationProvider">com.qualcomm.location</string>
     <string name="config_fusedLocationProviderPackageName">com.qualcomm.location</string>
-
+    <bool name="doze_proximity_sensor_supported">false</bool>
 </resources>
