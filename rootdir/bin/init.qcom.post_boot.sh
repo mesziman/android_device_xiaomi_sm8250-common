@@ -5354,11 +5354,11 @@ case "$target" in
 	else
 		echo 1228800 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 	fi
-	echo 576000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+	echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 	# configure input boost settings
-	echo "0:1324800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+	echo "0:1612800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 	echo 40 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
 	# configure governor settings for gold cluster
