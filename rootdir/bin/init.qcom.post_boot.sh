@@ -5359,7 +5359,7 @@ case "$target" in
 
 	# configure input boost settings
 	echo "0:1612800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
-	echo 40 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+	echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
@@ -5461,7 +5461,6 @@ case "$target" in
         setprop vendor.dcvs.prop 0
 	setprop vendor.dcvs.prop 1
     echo N > /sys/module/lpm_levels/parameters/sleep_disabled
-    echo 156 > /proc/sys/kernel/sched_min_task_util_for_colocation
     configure_memory_parameters
     ;;
 esac
