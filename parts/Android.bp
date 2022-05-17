@@ -1,0 +1,32 @@
+//
+// Copyright (C) 2017-2020 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "DeviceParts",
+    defaults: [
+        "SettingsLibDefaults",
+    ],
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+    resource_dirs: ["res"],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,    
+    platform_apis: true,
+    privileged: true,
+
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+        "SettingsLib",
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+
+}
