@@ -11,10 +11,8 @@ android_app {
     ],
     srcs: ["src/**/*.java"],
 
-    certificate: "platform",
     resource_dirs: ["res"],
     certificate: "platform",
-    platform_apis: true,
     system_ext_specific: true,    
     platform_apis: true,
     privileged: true,
