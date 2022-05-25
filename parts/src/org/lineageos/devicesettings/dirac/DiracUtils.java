@@ -117,4 +117,15 @@ public final class DiracUtils {
         audioManager.setParameters("hifi_mode=" + (paramInt == 1 ? true : false));
         mDiracSound.setHifiMode(paramInt);
     }
+    protected static boolean getKardon() {
+        AudioManager audioManager = mContext.getSystemService(AudioManager.class);
+        return audioManager.getParameters("old_volume_curve").contains("false");
+    }
+
+    protected static void setKardon(int paramInt) {
+        AudioManager audioManager = mContext.getSystemService(AudioManager.class);
+        audioManager.setParameters("old_volume_curve=" + (paramInt == 1 ? false : true));
+//        mDiracSound.setOldVolumeCurve(paramInt);
+    }
+
 }
