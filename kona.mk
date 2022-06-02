@@ -26,8 +26,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
 
 # Atrace
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service 
+#PRODUCT_PACKAGES += \
+#    android.hardware.atrace@1.0-service 
 
 #PRODUCT_PACKAGES += libmedia_jni_shim
 
