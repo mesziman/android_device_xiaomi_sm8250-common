@@ -57,7 +57,7 @@
         android:title="@string/dirac_kardon_title">
 
         <SwitchPreference
-            android:key="dirac_hifi_pref"
+            android:key="dirac_kardon_pref"
             android:defaultValue="false"
             android:title="@string/dirac_kardon_enable_title"
             android:summary="@string/dirac_kardon_summary"/>
