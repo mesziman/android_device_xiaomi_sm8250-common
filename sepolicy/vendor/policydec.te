@@ -11,6 +11,8 @@
 
 #============= hal_health_default ==============
 allow hal_health_default sysfs_wireless_supply:dir search;
+allow hal_health_default sysfs_wireless_supply:file r_file_perms;
+
 
 #============= hal_sensors_default ==============
 #allow hal_sensors_default default_prop:file read;
