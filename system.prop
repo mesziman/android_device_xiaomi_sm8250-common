@@ -59,10 +59,19 @@ media.stagefright.enable-qcp=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
-#ro.rom.zone=2
-#ro.miui.has_gmscore=1
-#ro.miui.build.region=eea
+ro.rom.zone=2
+ro.miui.has_gmscore=1
+ro.miui.build.region=eea
 
 #iorap
 ro.iorapd.enable=true
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+# set reasampler quality
+af.resampler.quality=4
+
+ro.audio.resampler.psd.stopband=132
+ro.audio.resampler.psd.halflength=960
+ro.audio.resampler.psd.cutoff_percent=99
+ro.audio.resampler.psd.tbwcheat=0
+# Disable MTE Async for system server
+arm64.memtag.process.system_server=off
