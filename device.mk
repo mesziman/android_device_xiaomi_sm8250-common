@@ -45,4 +45,6 @@ $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/umi/umi-vendor.mk)
+$(call inherit-product, vendor/xiaomi/soundfw/soundfw-vendor.mk)
 $(call inherit-product, vendor/xiaomi/umi-wfd/umi-wfd-vendor.mk)
+$(call inherit-product, vendor/xiaomi/umiqcb/umiqcb-vendor.mk)
