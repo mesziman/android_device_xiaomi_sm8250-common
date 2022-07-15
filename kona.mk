@@ -496,8 +496,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 
 $(call inherit-product, vendor/xiaomi/cam_meta/cam_meta-vendor.mk)
+$(call inherit-product, vendor/xiaomi/cit/cit-vendor.mk)
 
-# Surfaceflinger
 # Get non-open-source specific aspects.
 #$(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
 # Inherit the proprietary files
