@@ -5456,6 +5456,9 @@ case "$target" in
 		echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
 	    done
 	done
+
+#	echo 25 > /dev/blkio/background/blkio.ssg.max_available_ratio
+
         # memlat specific settings are moved to seperate file under
         # device/target specific folder
         setprop vendor.dcvs.prop 0

@@ -3,4 +3,4 @@ allow system_server app_zygote:process { getpgid };
 
 get_prop(system_server, vendor_camera_prop)
 
-binder_call(system_server, vendor_fod)
+#binder_call(system_server, vendor_fod)
