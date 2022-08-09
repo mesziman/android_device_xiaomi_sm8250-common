@@ -48,6 +48,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl
 
+PRODUCT_PACKAGES += com.dsi.ant@1.0.vendor
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -111,8 +112,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    android.hardware.bluetooth.audio@2.1-impl \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
@@ -238,6 +241,28 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
 
+#MIUI props
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.rom.zone=2 \
+    ro.miui.has_gmscore=1 \
+    ro.miui.build.region=eea
+
+#Sound Quality improvements
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.resampler.quality=4 \
+    ro.audio.resampler.psd.stopband=132 \
+    ro.audio.resampler.psd.halflength=960 \
+    ro.audio.resampler.psd.cutoff_percent=99 \
+    ro.audio.resampler.psd.tbwcheat=0
+
+# Disable MTE Async for system server
+PRODUCT_PROPERTY_OVERRIDES += arm64.memtag.process.system_server=off
+
+
+#memory optimization
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true \
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 # IFAA manager
 #PRODUCT_PACKAGES += \
     org.ifaa.android.manager
@@ -395,8 +420,7 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # WLAN
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wlan/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/configs/wlan/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
+    $(LOCAL_PATH)/configs/wlan/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6390/WCNSS_qcom_cfg.ini 
 
 # WiFi Display
 #PRODUCT_PACKAGES += \
