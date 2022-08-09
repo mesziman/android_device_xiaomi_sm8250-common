@@ -333,8 +333,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     telephony \
     usb \
     vibrator \
-    wlan \
-    wfd
+    wlan 
 
 
 PRODUCT_COPY_FILES += \
