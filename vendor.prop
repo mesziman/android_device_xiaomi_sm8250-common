@@ -244,7 +244,6 @@ persist.vendor.sensors.sync_request=true
 # Shutdown
 sys.vendor.shutdown.waittime=500
 
-persist.vendor.btstack.enable.lpa=true
 # WiFi
 wifi.aware.interface=wifi-aware0
 # media
