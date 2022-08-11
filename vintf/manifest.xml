@@ -361,6 +361,7 @@
             <name>IIop</name>
             <instance>default</instance>
         </interface>
+	<fqname>@2.0::IIop/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
@@ -370,6 +371,7 @@
             <name>IPerf</name>
             <instance>default</instance>
         </interface>
+        <fqname>@2.2::IPerf/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.qccvndhal</name>
