@@ -97,7 +97,6 @@ on init
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
     write /sys/fs/cgroup/memory/bg/memory.move_charge_at_immigrate 1
     chown root system /sys/fs/cgroup/memory/bg/tasks
-    write /sys/kernel/icnss/wpss_boot 1
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
 on post-fs
@@ -299,7 +298,6 @@ on post-fs-data
     mkdir /data/vendor/wifi/hostapd 0770 wifi wifi
     mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/vendor/mac_addr 0770 system wifi
     mkdir /data/vendor/wifi/wigig_hostapd 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
@@ -631,7 +629,7 @@ service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     oneshot
 
 service wigignpt /vendor/bin/wigignpt
-    # interface vendor.qti.hardware.wigig.netperftuner@1.0::INetPerfTuner default
+    interface vendor.qti.hardware.wigig.netperftuner@1.0::INetPerfTuner default
     class hal
     socket wigig/wigignpt stream 660 system wifi
     user system
