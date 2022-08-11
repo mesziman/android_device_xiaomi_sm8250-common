@@ -35,7 +35,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/mhi_*_pipe_4         0660   system     system
 
 /dev/xlog                 0660   system     audio
-
+/dev/btfmslim             0660   bluetooth  system
 /dev/genlock              0666   system     system
 /dev/wlan                 0660   wifi       wifi
 /dev/kgsl                 0666   system     system
@@ -258,6 +258,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/avtimer              0660   system     audio
 /dev/spidev2.0            0660   system     audio
 /dev/spidev22.0           0660   system     audio
+/dev/spidev10.0           0660   system     audio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
