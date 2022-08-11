@@ -255,7 +255,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Sound Quality improvements
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.resampler.quality=4 \
+    af.resampler.quality=7 \
     ro.audio.resampler.psd.stopband=132 \
     ro.audio.resampler.psd.halflength=960 \
     ro.audio.resampler.psd.cutoff_percent=99 \
@@ -387,6 +387,8 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     init.mi.btmac.sh \
+    init.crda.sh \
+    init.qcom.sdio.sh \
     fstab.qcom \
     ueventd.qcom.rc
 

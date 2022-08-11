@@ -49,7 +49,7 @@ ro.miui.build.region=eea
 ro.iorapd.enable=true
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 # set reasampler quality
-af.resampler.quality=4
+af.resampler.quality=7
 
 ro.audio.resampler.psd.stopband=132
 ro.audio.resampler.psd.halflength=960
