@@ -383,6 +383,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.mdm.sh \
     init.qcom.early_boot.sh \
+    init.veth_ipa_config.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
     init.qti.dcvs.sh
