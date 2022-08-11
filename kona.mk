@@ -415,6 +415,13 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+# Storage
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fuse.passthrough.enable=true \
+    ro.incremental.enable=yes
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # SSR
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE
