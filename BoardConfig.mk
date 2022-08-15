@@ -27,8 +27,7 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 TARGET_USES_FOD_ZPOS := true
 
-# Kernel
-KERNEL_DEFCONFIG := umi_user_defconfig
+KERNEL_DEFCONFIG := umi_defconfig
 
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
