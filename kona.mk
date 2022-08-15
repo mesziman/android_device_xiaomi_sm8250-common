@@ -232,6 +232,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gatekeeper.disable_spu=true
 
+# Gboard paddings
+# # Keyboard height ratio and bottom padding in dp for portrait mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.ime.height_ratio=1.0 \
+    ro.com.google.ime.kb_pad_port_b=10.0
+
+
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
