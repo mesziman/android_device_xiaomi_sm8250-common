@@ -366,6 +366,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf 
 
 #TARGET_COMMON_QTI_COMPONENTS += display
+
+
+PRODUCT_PACKAGES += \
+    libpiex_shim
+
 # Display
 PRODUCT_PACKAGES += \
     disable_configstore
