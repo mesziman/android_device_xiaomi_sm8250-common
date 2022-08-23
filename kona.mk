@@ -298,6 +298,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
+# VPP tunings
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/tunings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/tunings.txt
+
 # OMX
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
