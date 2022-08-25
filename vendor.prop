@@ -296,12 +296,8 @@ ro.soc.model=SM8250
 
 vendor.audio.spkcal.copy.inhal=true
 
-
-ro.hwui.use_vulkan=true
-ro.hardware.vulkan=adreno
-graphics.gpu.profiler.support=true
+debug.renderengine.backend=skiaglthreaded
 renderthread.skia.reduceopstasksplitting=true
-debug.hwui.renderer=skiavk
 #
 #snapdragon value add features
 #
