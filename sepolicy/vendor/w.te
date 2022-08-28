@@ -1,0 +1,52 @@
+
+
+#============= devicesettings_app ==============
+allow devicesettings_app system_data_file:dir search;
+allow devicesettings_app user_profile_root_file:dir search;
+
+
+#============= gmscore_app ==============
+allow gmscore_app bt_firmware_file:filesystem getattr;
+
+#============= hal_bluetooth_default ==============
+allow hal_bluetooth_default vendor_bt_data_file:dir write;
+
+#============= hal_fingerprint_default ==============
+#allow hal_fingerprint_default system_prop:file read;
+
+#============= hal_sensors_default ==============
+#allow hal_sensors_default default_prop:file read;
+
+#============= hal_wifi_default ==============
+allow hal_wifi_default persist_vendor_debug_wifi_prop:file read;
+
+#============= kernel ==============
+
+#============= mediacodec ==============
+allow mediacodec vendor_audio_prop:file map;
+
+#============= system_app ==============
+allow system_app vendor_diag_device:chr_file { read write };
+
+#============= system_server ==============
+#allow system_server vendor_default_prop:file read;
+
+#============= system_suspend ==============
+#allow system_suspend sysfs_wireless_supply:dir read;
+#allow system_suspend vendor_sysfs_battery_supply:dir read;
+
+#============= untrusted_app ==============
+
+#============= vendor_hal_neuralnetworks_default ==============
+#allow vendor_hal_neuralnetworks_default default_prop:file read;
+
+#============= vendor_hvdcp ==============
+allow vendor_hvdcp kmsg_device:chr_file { getattr write };
+
+#============= vendor_qti_init_shell ==============
+#allow vendor_qti_init_shell configfs:dir create;
+#allow vendor_qti_init_shell proc_page_cluster:file write;
+
+#============= vendor_sensors ==============
+#allow vendor_sensors vendor_sysfs_dynamic_fps:file open;
+
