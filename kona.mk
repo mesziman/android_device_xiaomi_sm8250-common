@@ -196,7 +196,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.native_mode=0 \
     ro.surface_flinger.support_kernel_idle_timer=true \
     ro.vendor.display.sensortype=2 \
-    vendor.display.enable_async_powermode=0 \
     vendor.display.qdcm.mode_combine=1 \
     vendor.display.use_layer_ext=0 \
     vendor.display.use_smooth_motion=0
