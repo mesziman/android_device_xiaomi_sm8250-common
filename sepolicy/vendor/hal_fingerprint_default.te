@@ -14,8 +14,8 @@ add_hwservice(hal_fingerprint_default, hal_fingerprint_hwservice_xiaomi)
 allow hal_fingerprint_default fingerprint_data_file:dir rw_dir_perms;
 allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
 
-allow hal_fingerprint_default sysfs_fod:file { open };
-allow hal_fingerprint_default sysfs_fod:file { read };
+allow hal_fingerprint_default vendor_sysfs_fod:file { open };
+allow hal_fingerprint_default vendor_sysfs_fod:file { read };
 
 # Allow hal_fingerprint_default to read and write to
 # fingerprint_device/input_device/tee_device/uhid_device
@@ -31,14 +31,14 @@ allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 
 allow hal_fingerprint_default {
   input_device
-  sysfs_graphics
+  vendor_sysfs_graphics
   sysfs_msm_subsys
 }: dir r_dir_perms;
 
 allow hal_fingerprint_default {
-  sysfs_fingerprint
-  sysfs_graphics
-  sysfs_fod
+  vendor_sysfs_fingerprint
+  vendor_sysfs_graphics
+  vendor_sysfs_fod
   sysfs_msm_subsys
 }: file rw_file_perms;
 
