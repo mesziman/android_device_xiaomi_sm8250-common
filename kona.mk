@@ -250,7 +250,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.height_ratio=1.0 \
     ro.com.google.ime.kb_pad_port_b=10.0
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
+TARGET_EXCLUDES_AUDIOFX := true
 
 # Health
 PRODUCT_PACKAGES += \
