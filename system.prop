@@ -45,9 +45,6 @@ ro.rom.zone=2
 ro.miui.has_gmscore=1
 ro.miui.build.region=eea
 
-#iorap
-ro.iorapd.enable=true
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 # set reasampler quality
 af.resampler.quality=7
 
