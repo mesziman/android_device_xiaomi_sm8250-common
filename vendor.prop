@@ -133,6 +133,7 @@ vendor.voice.path.for.pcm.voip=true
 
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.xiaomi.cameratest,com.xiaomi.factory.mmi,com.android.camera
+#persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 
 # Dalvik
 dalvik.vm.heapgrowthlimit=256m
