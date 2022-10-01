@@ -11,3 +11,11 @@ type hal_motor_hwservice, hwservice_manager_type;
 type hal_touchfeature_hwservice_xiaomi, hwservice_manager_type;
 
 type hal_dms_hwservice, hwservice_manager_type;
+
+type hal_misys_hwservice, hwservice_manager_type;
+
+type vendor_hal_cameraperf_hwservice, hwservice_manager_type;
+
+type vendor_hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
+
+type vendor_hal_citsensorservice_xiaomi_hwservice, hwservice_manager_type;
