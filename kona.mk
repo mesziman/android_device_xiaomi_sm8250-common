@@ -130,7 +130,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
     persist.vendor.bt.a2dp.mac_whitelist=false \
-    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
     persist.vendor.bt.aac_frm_ctl.enabled=true \
     persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
     persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
