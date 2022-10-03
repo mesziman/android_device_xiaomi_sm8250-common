@@ -58,7 +58,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += com.dsi.ant@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.kona \
     audio.r_submix.default \
