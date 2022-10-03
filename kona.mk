@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Adreno
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
 
 # Atrace
@@ -120,7 +120,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor 
  
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
@@ -160,7 +160,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=true
 
 PRODUCT_COPY_FILES += \
@@ -170,7 +170,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 # Charger
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.charger.disable_init_blank=true
 
 # Consumer IR
@@ -182,11 +182,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # Display
-#PRODUCT_PROPERTY_OVERRIDES += \
+#PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.sensortype=2 \
     vendor.display.use_layer_ext=1
  # Display
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.sf.color_mode=0 \
     persist.sys.sf.native_mode=0 \
     ro.surface_flinger.support_kernel_idle_timer=true \
@@ -218,7 +218,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # Force triple frame buffers
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
      ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 PRODUCT_COPY_FILES += \
@@ -230,7 +230,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0 \
     android.hardware.gatekeeper@1.0.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.gatekeeper.disable_spu=true
 
 # Gboard paddings
@@ -251,19 +251,19 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor
 
 # IMS
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
 
 #MIUI props
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.rom.zone=2 \
     ro.miui.has_gmscore=1 \
     ro.miui.build.region=eea
 
 #Sound Quality improvements
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     af.resampler.quality=7 \
     ro.audio.resampler.psd.stopband=132 \
     ro.audio.resampler.psd.halflength=960 \
@@ -271,11 +271,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.resampler.psd.tbwcheat=0
 
 # Disable MTE Async for system server
-PRODUCT_PROPERTY_OVERRIDES += arm64.memtag.process.system_server=off
+PRODUCT_VENDOR_PROPERTIES += arm64.memtag.process.system_server=off
 
 
 #memory optimization
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.device_config.runtime_native.usap_pool_enabled=true \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 # IFAA manager
@@ -291,7 +291,7 @@ PRODUCT_PACKAGES += \
    android.hardware.keymaster@4.1.vendor
 
 # Netflix
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.netflix.bsp_rev=Q8250-19134-1
 
 
@@ -335,7 +335,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # QSPM
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.qspm.enable=true
 
 # QTI
@@ -434,14 +434,14 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi
 
 # Storage
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true \
     ro.incremental.enable=yes
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # SSR
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Thermal
@@ -476,7 +476,7 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
     vndk_package
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     pm.dexopt.ab-ota=speed-profile \
     dalvik.vm.dexopt.secondary=true \
     ro.vendor.qti.am.reschedule_service=true \
