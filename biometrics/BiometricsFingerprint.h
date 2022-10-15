@@ -87,6 +87,7 @@ private:
     sp<IBiometricsFingerprintClientCallback> mClientCallback;
     xiaomi_fingerprint_device_t *mDevice;
     android::base::unique_fd touch_fd_;
+    bool mIsUdfps;
 };
 
 }  // namespace implementation
