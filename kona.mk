@@ -283,12 +283,14 @@ PRODUCT_PROPERTY_OVERRIDES += arm64.memtag.process.system_server=off
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-# IFAA manager
-#PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
 
-#PRODUCT_BOOT_JARS += \
-#    org.ifaa.android.manager
+
+# Mlipay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor
+# IFAA manager
+PRODUCT_PACKAGES += \
+    IFAAService
 
 # Keymaster
 PRODUCT_PACKAGES += \

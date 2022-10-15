@@ -22,7 +22,7 @@
 
 #include "xiaomi_fingerprint.h"
 #include "BiometricsFingerprint.h"
-
+#include <android-base/properties.h>
 #include <fstream>
 #include <inttypes.h>
 #include <poll.h>
@@ -83,31 +83,45 @@ namespace implementation {
 
 // Supported fingerprint HAL version
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
+typedef struct fingerprint_hal {
+    const char* class_name;
+    const bool is_udfps;
+} fingerprint_hal_t;
 
-// List of fingerprint HALs
-static const char *kHALClasses[] = {
-    "fpc",
-    "goodix_fod",
-    "goodix_fod6",
+static const fingerprint_hal_t kModules[] = {
+        {"fpc", false},        {"fpc_fod", true}, {"goodix", false}, {"goodix_fod", true},
+        {"goodix_fod6", true}, {"silead", false}, {"syna", true},
 };
+
 
 using RequestStatus =
         android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
 
+using ::android::base::SetProperty;
 BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 
 BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevice(nullptr) {
     sInstance = this; // keep track of the most recent instance
-    for (const auto& class_name : kHALClasses) {
+    for (auto& [class_name, is_udfps] : kModules) {
         mDevice = openHal(class_name);
         if (!mDevice) {
             ALOGE("Can't open HAL module, class %s", class_name);
         } else {
             ALOGI("Opened fingerprint HAL, class %s", class_name);
+            mIsUdfps = is_udfps;
+            SetProperty("persist.vendor.sys.fp.vendor", class_name);
             break;
         }
     }
 
+    if (!mDevice) {
+        ALOGE("Can't open any HAL module");
+        SetProperty("persist.vendor.sys.fp.vendor", "none");
+    }
+
+    if (mIsUdfps) {
+        SetProperty("ro.hardware.fp.udfps", "true");
+    }
     touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
 
     std::thread([this]() {
@@ -446,7 +460,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
 }
 
 Return<bool> BiometricsFingerprint::isUdfps(uint32_t /*sensorId*/) {
-    return true;
+    return mIsUdfps;
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t /*x*/, uint32_t /*y*/,
