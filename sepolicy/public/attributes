@@ -7,3 +7,5 @@ hal_attribute_aospa(motor)
 hal_attribute_aospa(touchfeature)
 
 hal_attribute_aospa(dms)
+
+hal_attribute_aospa(misys)

@@ -14,6 +14,8 @@ vendor.xiaomi.hardware.mlipay::IMlipayService                                 u:
 vendor.xiaomi.hardware.motor::IMotor                                          u:object_r:hal_motor_hwservice:s0
 vendor.xiaomi.hardware.touchfeature::ITouchFeature                            u:object_r:hal_touchfeature_hwservice_xiaomi:s0
 
+# Misys
+vendor.xiaomi.hardware.misys::IMiSys                                                 u:object_r:hal_misys_hwservice:s0
 
 # Dolby
 vendor.dolby.hardware.dms::IDms                                                          u:object_r:hal_dms_hwservice:s0
