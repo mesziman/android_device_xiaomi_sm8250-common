@@ -52,11 +52,6 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl
 
-
-# Dolby
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
-
 PRODUCT_PACKAGES += com.dsi.ant@1.0.vendor
 
 PRODUCT_PACKAGES += \
@@ -497,7 +492,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.image-dex2oat-threads=4
 
 
-$(call inherit-product, vendor/xiaomi/dolby/dolby-vendor.mk)
+
 # Surfaceflinger
 # Get non-open-source specific aspects.
 #$(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
