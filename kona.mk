@@ -155,6 +155,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.twsplus=true \
     persist.vendor.bt.a2dp.aac_whitelist=false
 
+PRODUCT_PACKAGES += \
+   libcodec2_hidl@1.0.vendor \
+   libcodec2_soft_common.vendor
 
 #Camera
 #PRODUCT_PACKAGES += \
