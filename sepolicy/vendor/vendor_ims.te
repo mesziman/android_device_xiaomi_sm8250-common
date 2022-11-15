@@ -1,1 +1,1 @@
-allow vendor_ims vendor_diag_device:chr_file { open read write ioctl };
+#allow vendor_ims vendor_diag_device:chr_file { open read write ioctl };
