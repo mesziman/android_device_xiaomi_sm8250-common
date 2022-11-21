@@ -18,6 +18,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Include GSI keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # Adreno
 PRODUCT_VENDOR_PROPERTIES += \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
