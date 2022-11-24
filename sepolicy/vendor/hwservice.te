@@ -14,6 +14,6 @@ type hal_misys_hwservice, hwservice_manager_type;
 
 type vendor_hal_cameraperf_hwservice, hwservice_manager_type;
 
-type vendor_hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
+type hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
 
 type vendor_hal_citsensorservice_xiaomi_hwservice, hwservice_manager_type;
