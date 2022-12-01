@@ -191,7 +191,6 @@ persist.radio.snapshot_enabled=0
 persist.radio.snapshot_timer=0
 persist.rcs.otp_sms_port=0
 persist.rcs.supported=1
-persist.vendor.data.iwlan.enable=true
 
 # Netmgr
 persist.data.df.dev_name=rmnet_usb0
