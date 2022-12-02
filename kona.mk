@@ -150,19 +150,18 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.bt.a2dp.aac_whitelist=false
 
 
-#Camera
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
    android.hardware.camera.provider@2.4-impl \
    android.hardware.camera.provider@2.4-service_64 \
    vendor.qti.hardware.camera.postproc@1.0.vendor
 
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/products/miuicamera.mk)
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libstdc++.vendor \
     libxml2 \
-    libdng_sdk.vendor
-#    vendor.qti.hardware.camera.device@1.0.vendor \
+    libdng_sdk.vendor \
+    libgui_vendor \
+    vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_VENDOR_PROPERTIES += \
@@ -380,6 +379,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+
+
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor
+        
 # QTI Trusted UI
 PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
@@ -495,7 +503,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.image-dex2oat-threads=4
 
 
-$(call inherit-product, vendor/xiaomi/cam_meta/cam_meta-vendor.mk)
+#$(call inherit-product, vendor/xiaomi/cam_meta/cam_meta-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/products/miuicamera.mk)
 $(call inherit-product, vendor/xiaomi/cit/cit-vendor.mk)
 
 # Get non-open-source specific aspects.

@@ -5,10 +5,5 @@ hal_attribute_aospa(mlipay)
 hal_attribute_aospa(motor)
 
 hal_attribute_aospa(touchfeature)
-<<<<<<< HEAD
-=======
-
-hal_attribute_aospa(dms)
 
 hal_attribute_aospa(misys)
->>>>>>> 003d92b (umi: Add support for misys)
