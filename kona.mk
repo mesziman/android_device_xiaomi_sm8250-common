@@ -280,8 +280,8 @@ PRODUCT_VENDOR_PROPERTIES += arm64.memtag.process.system_server=off
 
 #memory optimization
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.device_config.runtime_native.usap_pool_enabled=true \
-    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+    persist.device_config.runtime_native.usap_pool_enabled=true
+
 # IFAA manager
 #PRODUCT_PACKAGES += \
     org.ifaa.android.manager
