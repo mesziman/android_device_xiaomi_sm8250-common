@@ -44,8 +44,13 @@ persist.vendor.data.iwlan.enable=true
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
+
 # NFC
 ro.nfc.port=I2C
+
+# Wifi RTT
+config.disable_rtt=true
+
 # Zygote
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
