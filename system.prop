@@ -5,7 +5,6 @@ tunnel.audio.encode=true
 
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.report_codec=1
-persist.vendor.radio.redir_party_num=1
 persist.vendor.radio.add_power_save=1
 # Camera
 camera.disable_zsl_mode=true
@@ -38,9 +37,6 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
-
-# Netmgr
-persist.vendor.data.iwlan.enable=true
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
