@@ -28,6 +28,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 TARGET_USES_FOD_ZPOS := true
 
 KERNEL_DEFCONFIG := umi_defconfig
+KERNEL_LLVM_SUPPORT := true
 
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
