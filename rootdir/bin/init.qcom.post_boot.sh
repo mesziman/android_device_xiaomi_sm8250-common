@@ -783,7 +783,7 @@ low_ram=`getprop ro.config.low_ram`
 if [ "$ProductName" == "aospa_umi" ] || [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ]; then
       # Enable ZRAM
       configure_zram_parameters
-      #configure_read_ahead_kb_values
+      configure_read_ahead_kb_values
       echo 160 > /proc/sys/vm/swappiness
       echo 60 > /proc/sys/vm/direct_swappiness
       echo 0 > /proc/sys/vm/page-cluster
