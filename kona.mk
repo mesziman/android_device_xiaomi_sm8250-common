@@ -49,14 +49,12 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += com.dsi.ant@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
     audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
@@ -111,44 +109,25 @@ PRODUCT_COPY_FILES += \
 # Authsecret
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.audio@2.1-impl \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor \
-    com.qualcomm.qti.bluetooth_audio@1.0.vendor
- 
+#Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
-    persist.bluetooth.a2dp_offload.disabled=false \
-    persist.vendor.bt.a2dp.mac_whitelist=false \
-    eluetooth.hardware.power.idle_cur_ma=6 \
-    bluetooth.hardware.power.operating_voltage_mv=3700 \
-    bluetooth.hardware.power.rx_cur_ma=28 \
-    bluetooth.hardware.power.tx_cur_ma=36 \
-    persist.vendor.bt.aac_frm_ctl.enabled=true \
-    persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
+    persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
     persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
     persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
     persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=false \
     persist.vendor.qcom.bluetooth.enable.splita2dp=true \
     persist.vendor.qcom.bluetooth.scram.enabled=false \
     persist.vendor.qcom.bluetooth.soc=hastings \
-    persist.bluetooth.sbc_hd_higher_bitrate=1 \
     persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
-    ro.bluetooth.a2dp_offload.supported=true \
     ro.vendor.bluetooth.wipower=false \
+    vendor.hw.fm.init=0 \
     vendor.qcom.bluetooth.soc=hastings
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true \
-    persist.vendor.btstack.enable.twsplus=true \
-    persist.vendor.bt.a2dp.aac_whitelist=false
-
+    persist.vendor.btstack.enable.twsplus=true
+ 
 
 PRODUCT_PACKAGES += \
    android.hardware.camera.provider@2.4-impl \
