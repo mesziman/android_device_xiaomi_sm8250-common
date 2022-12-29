@@ -328,8 +328,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     display \
     gps \
-    media-legacy \
-    nq-nfc \
+    media \
+    nfc \
     overlay \
     perf \
     telephony \
