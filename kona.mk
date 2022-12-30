@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += com.dsi.ant@1.0.vendor
 
 PRODUCT_PACKAGES += \
+    audio.a2dp.default \
     audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
@@ -120,6 +121,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcom.bluetooth.scram.enabled=false \
     persist.vendor.qcom.bluetooth.soc=hastings \
     persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
+    persist.bluetooth.sbc_hd_higher_bitrate=1 \
+    persist.vendor.bt.aac_frm_ctl.enabled=true \
+    persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
     ro.vendor.bluetooth.wipower=false \
     vendor.hw.fm.init=0 \
     vendor.qcom.bluetooth.soc=hastings
@@ -127,7 +131,24 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true \
     persist.vendor.btstack.enable.twsplus=true
- 
+
+#split a2dp DSP supported encoder list
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptiver2-aac-ldac-lhdc \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
+    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptiver2-aac-ldac-lhdc
+
+# A2DP offload support
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.bluetooth.a2dp_offload.supported=true
+
+# Disable A2DP offload
+PRODUCT_VENDOR_PROPERTIES += \
+     persist.bluetooth.a2dp_offload.disabled=false
+
+# A2DP offload DSP supported encoder list
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-lhdc
 
 PRODUCT_PACKAGES += \
    android.hardware.camera.provider@2.4-impl \
