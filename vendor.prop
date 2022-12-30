@@ -299,3 +299,8 @@ persist.sys.mms.bg_apps_limit=96
 persist.device_config.activity_manager.use_compaction=true
 #disable hvdcp opti pps
 persist.vendor.hvdcp_opti.disallowed=1
+
+# Machine learning back gesture (requires TensorFlow model) 
+persist.device_config.systemui.use_back_gesture_ml_model=true
+persist.device_config.systemui.back_gesture_ml_model_name=backgesture
+persist.device_config.systemui.back_gesture_ml_model_threshold=0.9
