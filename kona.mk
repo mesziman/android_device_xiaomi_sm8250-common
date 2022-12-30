@@ -144,7 +144,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Disable A2DP offload
 PRODUCT_VENDOR_PROPERTIES += \
-     persist.bluetooth.a2dp_offload.disabled=false
+    persist.bluetooth.a2dp_offload.disabled=false
 
 # A2DP offload DSP supported encoder list
 PRODUCT_VENDOR_PROPERTIES += \
