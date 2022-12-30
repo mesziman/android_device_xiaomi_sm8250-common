@@ -504,6 +504,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat-threads=4 \
     dalvik.vm.image-dex2oat-threads=4
 
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.heapstartsize=24m \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.46 \
+    dalvik.vm.heapminfree=8m \
+    dalvik.vm.heapmaxfree=48m
 
 #$(call inherit-product, vendor/xiaomi/cam_meta/cam_meta-vendor.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/products/miuicamera.mk)
