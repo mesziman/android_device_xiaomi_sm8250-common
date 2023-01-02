@@ -10,6 +10,7 @@ TARGET_BOARD_PLATFORM := kona
 
 # Overlays
 PRODUCT_PACKAGES += \
+    SM8250CarrierConfig \
     AOSPAMiKonaFrameworks \
     AOSPAMiKonaSettings \
     MiKonaFrameworks \
