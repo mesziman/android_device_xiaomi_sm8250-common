@@ -150,6 +150,7 @@ TARGET_USES_MEDIA_EXTENSIONS := true
     frameworks/av/services/camera/libcameraservice
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := false
 
 # Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
