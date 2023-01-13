@@ -17,11 +17,6 @@ PRODUCT_PACKAGES += \
     MiKonaSystemUI \
     WifiResTarget
 
-
-PRODUCT_PACKAGES += \
-    Aperture \
-    ApertureOverlay
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 
