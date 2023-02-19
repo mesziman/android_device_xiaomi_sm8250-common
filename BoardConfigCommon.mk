@@ -62,7 +62,7 @@ DEVICE_MANIFEST_FILE += \
     $(COMMON_PATH)/vintf/manifest.xml \
     $(COMMON_PATH)/vintf/xiaomi_manifest.xml
 
-DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
+#DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
 
 # Hacks
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
