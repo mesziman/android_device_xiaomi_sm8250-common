@@ -325,8 +325,7 @@ PRODUCT_PACKAGES += \
 
 # Paranoid Doze
 PRODUCT_PACKAGES += \
-    ParanoidDoze \
-    DeviceParts
+    ParanoidDoze
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sensor.pickup=xiaomi.sensor.pickup \
