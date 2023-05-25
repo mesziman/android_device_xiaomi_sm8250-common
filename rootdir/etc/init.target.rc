@@ -47,6 +47,7 @@ on init
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
     chown system system /proc/last_kmsg
+    chmod 0666 /dev/uhid
 
 on early-fs
     start vold
@@ -67,6 +68,11 @@ on fs
     mkdir /mnt/vendor/persist/data 0700 system system
     chmod 644 /mnt/vendor/persist/audio/us_manual_cal
     mkdir /mnt/vendor/persist/subsys 0770 root system
+    chmod 0644 /dev/elliptic0
+    chmod 0644 /dev/elliptic1
+    chown system system /sys/class/smartpa/re25_calib
+    chmod 0666 /sys/class/smartpa/re25_calib
+
     #+ add for watermark
     mkdir /mnt/vendor/persist/camera 0777 root root
     mkdir /dev/logfs 0771 system system
@@ -95,8 +101,6 @@ on late-fs
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
-    chmod 0644 /dev/elliptic0
-    chmod 0644 /dev/elliptic1
     # Enable WLAN cold boot calibration
     write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6390/fs_ready 1
     chmod 0660 /dev/ir_spi
@@ -112,12 +116,14 @@ on post-fs-data
 
 on early-boot
     start vendor.sensors
+    verity_update_state
+
 on property:ro.boot.dp=0x0
     write /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm8150@0:qcom,power-on@800/pshold_reboot 7
 
 on boot
     chown system system /sys/class/touch/touch_dev/palm_sensor
-    write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/audio-app/cpus 0-7
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
