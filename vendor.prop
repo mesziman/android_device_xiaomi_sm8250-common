@@ -289,4 +289,4 @@ persist.sys.mms.bg_apps_limit=96
 
 persist.device_config.activity_manager.use_compaction=true
 #disable hvdcp opti pps
-persist.vendor.hvdcp_opti.disallowed=1
+#persist.vendor.hvdcp_opti.disallowed=1

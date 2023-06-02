@@ -228,11 +228,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0 \
-    android.hardware.gatekeeper@1.0.vendor
-
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.gatekeeper.disable_spu=true
 
@@ -286,11 +281,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 #PRODUCT_BOOT_JARS += \
 #    org.ifaa.android.manager
-
-# Keymaster
-PRODUCT_PACKAGES += \
-   android.hardware.keymaster@4.1 \
-   android.hardware.keymaster@4.1.vendor
 
 # Netflix
 PRODUCT_VENDOR_PROPERTIES += \
@@ -346,6 +336,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     display \
     gps \
+    keymaster \
     media \
     nfc \
     overlay \
