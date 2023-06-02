@@ -51,7 +51,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.2-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl \
+    sound_trigger.primary.$(TARGET_BOARD_PLATFORM)
 
 PRODUCT_PACKAGES += com.dsi.ant@1.0.vendor
 
