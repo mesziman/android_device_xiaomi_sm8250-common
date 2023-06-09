@@ -248,12 +248,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhwbinder.vendor
 
-# IMS
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1
-
 #MIUI props
 PRODUCT_VENDOR_PROPERTIES += \
     ro.rom.zone=2 \
@@ -316,7 +310,8 @@ PRODUCT_PACKAGES += \
 
 # Paranoid Doze
 PRODUCT_PACKAGES += \
-    ParanoidDoze
+    ParanoidDoze \
+    DeviceParts
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sensor.pickup=xiaomi.sensor.pickup \
