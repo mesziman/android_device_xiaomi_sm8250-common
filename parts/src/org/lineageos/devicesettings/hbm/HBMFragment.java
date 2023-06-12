@@ -33,7 +33,7 @@ import androidx.preference.TwoStatePreference;
 
 import org.lineageos.settings.utils.DisplayUtils;
 import org.lineageos.settings.utils.FileUtils;
-import org.lineageos.settings.R;
+import org.lineageos.devicesettings.R;;
 
 public class HBMFragment extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {

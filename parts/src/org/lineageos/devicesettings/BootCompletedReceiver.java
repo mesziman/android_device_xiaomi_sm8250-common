@@ -42,7 +42,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
         DiracUtils.initialize(context);
-        FileUtils.enableService(context);
         DisplayUtils.enableService(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);

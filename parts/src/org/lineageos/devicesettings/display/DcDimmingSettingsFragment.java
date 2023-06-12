@@ -31,7 +31,7 @@ import android.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 
-import org.lineageos.settings.R;
+import org.lineageos.devicesettings.R;;
 import org.lineageos.settings.utils.FileUtils;
 
 import java.io.File;
