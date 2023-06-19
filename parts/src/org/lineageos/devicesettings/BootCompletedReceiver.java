@@ -27,8 +27,8 @@ import android.util.Log;
 import androidx.preference.PreferenceManager;
 
 import org.lineageos.devicesettings.dirac.DiracUtils;
-import org.lineageos.settings.utils.DisplayUtils;
-import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.devicesettings.utils.DisplayUtils;
+import org.lineageos.devicesettings.utils.FileUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;

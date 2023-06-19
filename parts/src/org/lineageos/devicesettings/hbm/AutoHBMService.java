@@ -1,4 +1,4 @@
-package org.lineageos.settings.hbm;
+package org.lineageos.devicesettings.hbm;
 
 import android.app.KeyguardManager;
 import android.app.Service;
@@ -16,9 +16,9 @@ import android.os.PowerManager;
 import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 
-import org.lineageos.settings.utils.DisplayUtils;
-import org.lineageos.settings.utils.FileUtils;
-import org.lineageos.settings.display.*;
+import org.lineageos.devicesettings.utils.DisplayUtils;
+import org.lineageos.devicesettings.utils.FileUtils;
+import org.lineageos.devicesettings.display.*;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

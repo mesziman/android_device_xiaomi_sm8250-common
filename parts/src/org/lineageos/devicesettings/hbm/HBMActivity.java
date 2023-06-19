@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.hbm;
+package org.lineageos.devicesettings.hbm;
 
 import android.app.Fragment;
 import android.os.Bundle;

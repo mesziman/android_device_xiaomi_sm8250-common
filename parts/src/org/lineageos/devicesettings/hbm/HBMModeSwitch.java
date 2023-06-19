@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.hbm;
+package org.lineageos.devicesettings.hbm;
 
 import android.provider.Settings;
 import android.content.Context;
@@ -24,9 +24,9 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.utils.DisplayUtils;
-import org.lineageos.settings.utils.FileUtils;
-import org.lineageos.settings.display.*;
+import org.lineageos.devicesettings.utils.DisplayUtils;
+import org.lineageos.devicesettings.utils.FileUtils;
+import org.lineageos.devicesettings.display.*;
 
 public class HBMModeSwitch implements OnPreferenceChangeListener {
     private static final String HBM = "/sys/class/drm/card0/card0-DSI-1/disp_param";

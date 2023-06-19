@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.display;
+package org.lineageos.devicesettings.display;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -32,7 +32,7 @@ import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 
 import org.lineageos.devicesettings.R;;
-import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.devicesettings.utils.FileUtils;
 
 import java.io.File;
 
@@ -84,7 +84,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
     }
 
     private void updateHBMUI(boolean enabled) {
-        Intent intent = new Intent("org.lineageos.settings.hbm.UPDATE_TILE");
+        Intent intent = new Intent("org.lineageos.devicesettings.hbm.UPDATE_TILE");
         intent.putExtra("enabled", enabled);
         getActivity().sendBroadcast(intent);
         // Update HBM preference UI

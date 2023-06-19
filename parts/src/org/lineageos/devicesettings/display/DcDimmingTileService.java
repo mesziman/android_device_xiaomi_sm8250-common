@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.display;
+package org.lineageos.devicesettings.display;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -29,7 +29,7 @@ import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 
-import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.devicesettings.utils.FileUtils;
 
 import java.io.File;
 
@@ -76,7 +76,7 @@ public class DcDimmingTileService extends TileService {
     }
 
     private void updateHBMUI(boolean enabled) {
-        Intent intent = new Intent("org.lineageos.settings.hbm.UPDATE_TILE");
+        Intent intent = new Intent("org.lineageos.devicesettings.hbm.UPDATE_TILE");
         intent.putExtra("enabled", enabled);
         sendBroadcast(intent);
     }

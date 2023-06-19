@@ -16,7 +16,7 @@
 *
 */
 
-package org.lineageos.settings.hbm;
+package org.lineageos.devicesettings.hbm;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -29,9 +29,9 @@ import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 
-import org.lineageos.settings.utils.DisplayUtils;
-import org.lineageos.settings.utils.FileUtils;
-import org.lineageos.settings.display.*;
+import org.lineageos.devicesettings.utils.DisplayUtils;
+import org.lineageos.devicesettings.utils.FileUtils;
+import org.lineageos.devicesettings.display.*;
 
 public class HBMModeTileService extends TileService {
 

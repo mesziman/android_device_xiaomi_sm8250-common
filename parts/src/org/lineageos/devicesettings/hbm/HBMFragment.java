@@ -17,7 +17,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.hbm;
+package org.lineageos.devicesettings.hbm;
 
 import android.content.Context;
 import android.content.Intent;
@@ -31,8 +31,8 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.TwoStatePreference;
 
-import org.lineageos.settings.utils.DisplayUtils;
-import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.devicesettings.utils.DisplayUtils;
+import org.lineageos.devicesettings.utils.FileUtils;
 import org.lineageos.devicesettings.R;;
 
 public class HBMFragment extends PreferenceFragment

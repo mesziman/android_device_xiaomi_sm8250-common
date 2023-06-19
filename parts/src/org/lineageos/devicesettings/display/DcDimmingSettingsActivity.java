@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.display;
+package org.lineageos.devicesettings.display;
 
 import android.os.Bundle;
 
