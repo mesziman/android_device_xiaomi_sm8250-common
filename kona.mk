@@ -339,7 +339,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     perf \
     telephony \
     usb \
-    vibrator \
     wlan \
     wfd
 
@@ -449,6 +448,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
+
+# Vibrator
+$(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
