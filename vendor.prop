@@ -182,8 +182,8 @@ persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
 
 # Radio
-persist.radio.snapshot_enabled=0
-persist.radio.snapshot_timer=0
+ro.vendor.radio.5g=3
+ro.vendor.radio.features_common=3
 persist.rcs.otp_sms_port=0
 persist.rcs.supported=1
 
@@ -292,7 +292,5 @@ debug.sf.earlyGl.app.duration=21000000
 debug.sf.frame_rate_multiple_threshold=60
 
 persist.sys.mms.bg_apps_limit=96
-
-persist.device_config.activity_manager.use_compaction=true
 #disable hvdcp opti pps
 #persist.vendor.hvdcp_opti.disallowed=1
