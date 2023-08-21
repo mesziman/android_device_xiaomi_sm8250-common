@@ -500,6 +500,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 #$(call inherit-product, vendor/xiaomi/cam_meta/cam_meta-vendor.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/products/miuicamera.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/dolbysurya/dolbysurya-vendor.mk)
 
 # Surfaceflinger
 # Get non-open-source specific aspects.
