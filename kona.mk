@@ -278,6 +278,12 @@ PRODUCT_VENDOR_PROPERTIES += \
 #PRODUCT_BOOT_JARS += \
 #    org.ifaa.android.manager
 
+# Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail_vendor \
+    libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor
+
 # Netflix
 PRODUCT_VENDOR_PROPERTIES += \
     ro.netflix.bsp_rev=Q8250-19134-1
