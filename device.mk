@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
     AOSPAUmiSettings \
     AOSPAUmiSystemUI \
     UmiFrameworks \
+		UmiNfc \
     UmiSystemUI
 
 # Fingerprint
