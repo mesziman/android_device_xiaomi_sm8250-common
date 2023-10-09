@@ -26,6 +26,7 @@ import android.os.SystemProperties;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.devicesettings.dirac.DiracUtils;
 import org.lineageos.devicesettings.utils.DisplayUtils;
 import org.lineageos.devicesettings.utils.FileUtils;
 
@@ -40,6 +41,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
+        DiracUtils.initialize(context);
         DisplayUtils.enableService(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
