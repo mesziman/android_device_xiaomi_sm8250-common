@@ -192,7 +192,7 @@ persist.data.df.dev_name=rmnet_usb0
 persist.data.netmgrd.qos.enable=true
 persist.data.wda.enable=true
 persist.rmnet.data.enable=true
-persist.data.df.iwlan_mux=9
+persist.vendor.data.iwlan.enable=true
 ro.vendor.use_data_netmgrd=true
 
 persist.vendor.radio.5g_mode_pref=1
