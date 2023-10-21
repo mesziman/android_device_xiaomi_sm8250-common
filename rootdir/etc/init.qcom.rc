@@ -517,6 +517,9 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/dirty_ratio 75
     write /proc/sys/vm/dirty_background_ratio 75
 
+    write /dev/stune/foreground/schedtune.prefer_idle 0
+    write /dev/stune/top-app/schedtune.prefer_idle 0
+ 
     #Reset read ahead for dm-0 and dm-1 to 512kb
     # Runtime fs tuning
     write /sys/block/sda/queue/read_ahead_kb 128
