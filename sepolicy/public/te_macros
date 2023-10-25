@@ -1,5 +1,5 @@
 #####################################
-# hal_attribute_pa(hal_name)
+# hal_attribute_aospa(hal_name)
 define(`hal_attribute_aospa', `
 attribute hal_$1;
 expandattribute hal_$1 true;
