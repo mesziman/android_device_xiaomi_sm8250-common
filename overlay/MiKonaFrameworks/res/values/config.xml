@@ -278,14 +278,15 @@
         <item>9</item> <!-- COLOR_MODE_DISPLAY_P3 -->
     </integer-array>
 
-    
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">co.aospa.sensor.udfps</string>
+
     <string name="config_wifi_tcp_buffers">524288,1048576,8808040,262144,524288,6710886</string>
     <!--bool name="config_enableGeocoderOverlay" translatable="false">true</bool>
     <bool name="config_enableGeofenceOverlay" translatable="false">true</bool-->
 
     <string name="config_comboNetworkLocationProvider">com.qualcomm.location</string>
     <string name="config_networkLocationProviderPackageName">com.qualcomm.location</string>
- 
+
     <bool name="doze_proximity_sensor_supported">false</bool>
     <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
     <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>

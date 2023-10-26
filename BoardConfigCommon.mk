@@ -52,7 +52,7 @@ TARGET_NO_RAW10_CUSTOM_FORMAT := true
 
 # Fingerprint
 ifeq ($(TARGET_HAS_FOD),true)
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.xiaomi_umi
+TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/xiaomi:libudfps_extension.xiaomi
 endif
 
 # HIDL

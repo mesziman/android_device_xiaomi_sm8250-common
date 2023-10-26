@@ -218,11 +218,19 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 ifeq ($(TARGET_HAS_FOD),true)
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.umi \
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
-    vendor.xiaomi.hardware.fingerprintextension@1.0.vendor \
     vendor.xiaomi.hardware.touchfeature@1.0.vendor
 endif
+
+
+PRODUCT_PACKAGES += \
+    libudfpshandler \
+    sensors.udfps
+
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Force triple frame buffers
 PRODUCT_VENDOR_PROPERTIES += \
