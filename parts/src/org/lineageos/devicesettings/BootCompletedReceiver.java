@@ -26,10 +26,8 @@ import android.os.SystemProperties;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.devicesettings.dirac.DiracUtils;
 import org.lineageos.devicesettings.utils.DisplayUtils;
 import org.lineageos.devicesettings.utils.FileUtils;
-import org.lineageos.devicesettings.dolby.DolbyUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
@@ -40,17 +38,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            return;
-        }
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
         DisplayUtils.enableService(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
-
-        // Dolby Atmos
-        DolbyUtils.getInstance(context).onBootCompleted();
     }
 }

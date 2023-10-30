@@ -182,10 +182,7 @@ TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_umi
 # Sepolicy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += \
-		$(COMMON_PATH)/sepolicy/vendor \
-    $(COMMON_PATH)/sepolicy/dolby/vendor \
-
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 #SELINUX_IGNORE_NEVERALLOWS := true
 

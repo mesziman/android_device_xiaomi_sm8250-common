@@ -93,10 +93,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
     $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     $(LOCAL_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf
-
-
 
 
 PRODUCT_COPY_FILES += \
@@ -287,12 +284,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 #PRODUCT_BOOT_JARS += \
 #    org.ifaa.android.manager
-
-# Media
-PRODUCT_PACKAGES += \
-    libavservices_minijail_vendor \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
 
 # Netflix
 PRODUCT_VENDOR_PROPERTIES += \
@@ -508,7 +499,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapmaxfree=48m
 
 #$(call inherit-product, vendor/xiaomi/cam_meta/cam_meta-vendor.mk)
-$(call inherit-product-if-exists, vendor/xiaomi/dolbysurya/dolbysurya-vendor.mk)
 
 # Surfaceflinger
 # Get non-open-source specific aspects.
