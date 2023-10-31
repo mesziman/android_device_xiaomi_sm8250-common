@@ -14,5 +14,5 @@
 
 runtime_resource_overlay {
     name: "UmiNfc",
-    device_specific: true,
+    product_specific: true,
 }
