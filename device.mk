@@ -30,6 +30,12 @@ TARGET_HAS_FOD := true
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 PRODUCT_PACKAGES += audio_amplifier.sm6150
+
+
+# Display
+PRODUCT_COPY_FILES += \
+		$(LOCAL_PATH)/display_id_4630946545580055169.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946545580055169.xml
+
 # Audio configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
