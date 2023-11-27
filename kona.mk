@@ -498,6 +498,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapmaxfree=48m
 
 #$(call inherit-product, vendor/xiaomi/cam_meta/cam_meta-vendor.mk)
+$(call inherit-product, vendor/xiaomi/cit/cit-vendor.mk)
 
 # Surfaceflinger
 # Get non-open-source specific aspects.
