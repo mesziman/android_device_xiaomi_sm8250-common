@@ -16,7 +16,8 @@ PRODUCT_PACKAGES += \
     AOSPAMiKonaSettings \
     MiKonaFrameworks \
     MiKonaSystemUI \
-    WifiResTarget
+    WifiResTarget \
+    WifiMainline
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
