@@ -27,10 +27,20 @@
 #define TOUCH_MAGIC 0x5400
 #define TOUCH_IOC_SETMODE TOUCH_MAGIC + 0
 
+#define DISPPARAM_FOD_HBM_OFF "0xE0000"
+#define DISPPARAM_PATH "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param"
+
 static const char* kFodUiPaths[] = {
         "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui",
         "/sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui",
 };
+
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
+
 
 static bool readBool(int fd) {
     char c;
@@ -92,24 +102,27 @@ class XiaomiKonaUdfpsHandler : public UdfpsHandler {
 
     void onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/, float /*major*/) {
         // nothing
+        int arg[2] = {TOUCH_FOD_ENABLE, FOD_STATUS_ON};
+        ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
     }
 
     void onFingerUp() {
+        set(DISPPARAM_PATH, DISPPARAM_FOD_HBM_OFF);
         // nothing
     }
 
     void onAcquired(int32_t result, int32_t vendorCode) {
-        if (result == FINGERPRINT_ACQUIRED_GOOD) {
-            int arg[2] = {TOUCH_FOD_ENABLE, FOD_STATUS_OFF};
-            ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
-        } else if (vendorCode == 21 || vendorCode == 23) {
+        //if (result == FINGERPRINT_ACQUIRED_GOOD) {
+        //    int arg[2] = {TOUCH_FOD_ENABLE, FOD_STATUS_OFF};
+        //    ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
+        //} else if (vendorCode == 21 || vendorCode == 23) {
             /*
              * vendorCode = 21 waiting for fingerprint authentication
              * vendorCode = 23 waiting for fingerprint enroll
              */
-            int arg[2] = {TOUCH_FOD_ENABLE, FOD_STATUS_ON};
-            ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
-        }
+        //    int arg[2] = {TOUCH_FOD_ENABLE, FOD_STATUS_ON};
+        //    ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
+        //}
     }
 
     void cancel() {
