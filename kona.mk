@@ -250,8 +250,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
-    android.hardware.health@2.1-service 
+    android.hardware.health-service.qti
+
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # HIDL
 PRODUCT_PACKAGES += \

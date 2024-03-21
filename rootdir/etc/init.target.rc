@@ -202,6 +202,10 @@ on boot
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui
 
+    # Lineage Health
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param
     chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param
 
@@ -223,7 +227,7 @@ on property:vendor.display.lcd_density=640
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
-on charger
+on property:init.svc.vendor.charger=running
     mkdir /mnt/vendor/persist
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
