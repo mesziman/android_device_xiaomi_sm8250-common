@@ -5459,7 +5459,7 @@ case "$target" in
 	    done
 	done
 
-#	echo 25 > /dev/blkio/background/blkio.ssg.max_available_ratio
+	echo 25 > /dev/blkio/background/blkio.ssg.max_available_ratio
 
         # memlat specific settings are moved to seperate file under
         # device/target specific folder
