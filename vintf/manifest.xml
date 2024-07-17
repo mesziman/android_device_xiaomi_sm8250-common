@@ -130,6 +130,8 @@
             <name>ISecureElement</name>
             <instance>SIM1</instance>
             <instance>eSE1</instance>
+            <instance>SIM2</instance>
+            <instance>eSE2</instance>
         </interface>
     </hal>
     <hal format="hidl">
