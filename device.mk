@@ -29,8 +29,6 @@ TARGET_HAS_FOD := true
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-PRODUCT_PACKAGES += audio_amplifier.sm6150
-
 
 # Display
 PRODUCT_COPY_FILES += \
