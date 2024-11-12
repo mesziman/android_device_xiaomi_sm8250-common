@@ -33,7 +33,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 #PRODUCT_PACKAGES += libmedia_jni_shim
 
 PRODUCT_CHARACTERISTICS := nosdcard
-
+$(call soong_config_set,tinycompress,enable_extended_compress_format,true)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -46,6 +46,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+#TARGET_PROVIDES_AUDIO_HAL := true
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -223,7 +224,6 @@ endif
 
 
 PRODUCT_PACKAGES += \
-    libudfpshandler \
     sensors.udfps
 
 
