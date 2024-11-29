@@ -14,6 +14,7 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 # ADSP Modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
+vendor/lib/rfsa/adsp/hrtf5c.bin
 vendor/lib/rfsa/adsp/capi_v2_cirrus_sp.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
@@ -86,6 +87,8 @@ vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioroute_ext.so
 vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
+vendor/bin/audioflacapp
+vendor/lib/libtinycompress.so
 
 # Camera
 vendor/lib64/camera/com.qti.actuator.umi_dw9800_ov16e10.so
@@ -560,6 +563,8 @@ vendor/firmware/cs35l41-dsp1-spk-prot.bin
 vendor/firmware/cs35l41-dsp1-spk-prot.wmfw
 
 # OMX
+vendor/lib64/libMpeghSwEnc.so
+vendor/lib/libMpeghSwEnc.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libdsd2pcm.so
@@ -608,9 +613,13 @@ vendor/lib64/sensors.ssc.so
 vendor/lib64/sensors.touch.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service |NEW |LMI
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc |NEW |LMI
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml |NEW
+vendor/etc/sensors/calibratedCheck.json |NEW
 
 # Sensors-configs
+vendor/etc/sensors/config/sns_screen_down.json |NEW
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/bmp285_0.json
 vendor/etc/sensors/config/lsm6dso_0.json
@@ -655,6 +664,12 @@ vendor/etc/sensors/config/sx933x_0.json
 vendor/etc/sensors/config/tcs3408.json
 vendor/etc/sensors/config/tcs3701.json
 vendor/etc/sensors/config/vl53l1_tof_0.json
+vendor/etc/sensors/config/sns_dbtap.json |NEW |LMI
+vendor/etc/sensors/config/sns_oem13.json |NEW |LMI
+vendor/etc/sensors/proto/sns_direct_channel.proto |NEW |LMI
+vendor/etc/sensors/proto/sns_eqm.proto |NEW |LMI
+vendor/etc/sensors/proto/sns_oem15.proto |NEW |LMI
+vendor/etc/sensors/proto/sns_ois_manager.proto |NEW |LMI
 vendor/etc/sensors/judge_calibrated.json
 vendor/etc/sensors/proto/descriptor.proto
 vendor/etc/sensors/proto/nanopb.proto

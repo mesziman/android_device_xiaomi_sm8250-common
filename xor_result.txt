@@ -1,5 +1,51 @@
 
-framework/camerax-vendor-extensions.jar |NEW
+vendor/bin/ipacm-diag |NEW |LMI
+vendor/bin/loadalgo |NEW |LMI
+vendor/bin/mutualex |NEW |LMI
+vendor/bin/qtigetprop |NEW |LMI
+vendor/bin/qtisetprop |NEW |LMI
+vendor/bin/shsusrd |NEW |LMI
+vendor/bin/tloc_daemon |NEW |LMI
+vendor/bin/vendor.qti.hardware.soter@1.0-provision |NEW |LMI
+vendor/etc/audio_configs.xml |NEW |LMI
+vendor/etc/audio_configs_stock.xml |NEW |LMI
+vendor/etc/audio_effects.conf |NEW |LMI
+vendor/etc/audio_effects.xml |NEW |LMI
+vendor/etc/audio_io_policy.conf |NEW |LMI
+vendor/etc/audio_platform_info_intcodec.xml |NEW |LMI
+vendor/etc/audio_policy_volumes.xml |NEW |LMI
+vendor/etc/audio_tuning_mixer.txt |NEW |LMI
+vendor/etc/gpfspath_oem_config.xml |NEW |LMI
+vendor/etc/init/init.embmssl_server.rc |NEW |LMI
+vendor/etc/init/init_thermal-engine.rc |NEW |LMI
+vendor/etc/init/ipacm-diag.rc |NEW |LMI
+vendor/etc/init/qmipriod.debug.rc |NEW |LMI
+vendor/etc/init/shsusrd.rc |NEW |LMI
+vendor/etc/init/tloc_daemon.rc |NEW |LMI
+vendor/etc/mixer_paths.xml |NEW |LMI
+vendor/etc/mixer_paths_overlay_dynamic.xml |NEW |LMI
+vendor/etc/mixer_paths_overlay_static.xml |NEW |LMI
+vendor/etc/qmi_fw.conf |NEW |LMI
+vendor/etc/thermal-per-camera.conf |NEW |LMI
+vendor/etc/thermal-per-class0.conf |NEW |LMI
+vendor/etc/thermal-per-normal.conf |NEW |LMI
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so |NEW |LMI
+vendor/lib/hw/com.dsi.ant@1.0-impl.so |NEW |LMI
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so |NEW |LMI
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so |NEW |LMI
+vendor/lib/liba2dpoffload.so |NEW |LMI
+vendor/lib/libaudioalsa.so |NEW |LMI
+vendor/lib/libaudioparsers.so |NEW |LMI
+vendor/lib/libbluetooth_audio_session_qti_2_1.so |NEW |LMI
+vendor/lib/libbt-hidlclient.so |NEW |LMI
+vendor/lib/libbtnv.so |NEW |LMI
+vendor/lib/libdrc.so |NEW |LMI
+vendor/lib/libmdmdetect.so |NEW |LMI
+vendor/lib/libopenvx.so |NEW |
+vendor/lib/libresampler.so |NEW |LMI
+vendor/lib/libsmemlog.so |NEW |LMI
+vendor/lib/libsurround_3mic_proc.so |NEW |LMI
+
 lib/android.hardware.camera.device@3.5.so |NEW
 lib/android.hardware.camera.metadata@3.2.so |NEW
 lib/android.hardware.camera.metadata@3.3.so |NEW
@@ -20,10 +66,15 @@ lib64/android.hardware.camera.metadata@3.3.so |NEW
 lib64/android.hardware.camera.metadata@3.4.so |NEW
 lib64/android.hardware.camera.metadata@3.5.so |NEW
 lib64/android.hardware.camera.metadata@3.6.so |NEW
+lib64/libandroid_runtime.so |NEW
+lib64/libaudioclient.so |NEW
+lib64/libaudiopolicyenginedefault.so |NEW
+lib64/libaudiopolicymanagerdefault.so |NEW
+lib64/libaudiopolicymanagerstub.so |NEW
+lib64/libaudioutils.so |NEW
 lib64/libcamera_metadata.so |NEW
 lib64/libcameraservice.so |NEW
 lib64/vendor.qti.hardware.camera.postproc@1.0.so |NEW
-priv-app/MIUIMusicGlobal/MIUIMusicGlobal.apk |NEW
 product/app/PowerOffAlarm/PowerOffAlarm.apk |NEW
 system/lib/libcameraservice.so |NEW
 system/lib/vendor.dolby.hardware.dms@2.0.so |NEW
@@ -56,8 +107,7 @@ system_ext/lib64/libvr_sam_wrapper.so |NEW
 system_ext/lib64/libvraudio.so |NEW
 system_ext/priv-app/DaxUI/DaxUI.apk |NEW
 system_ext/priv-app/daxService/daxService.apk |NEW
-vendor/bin/audioflacapp |NEW
-vendor/bin/embmsslServer |NEW
+vendor/app/com.qualcomm.qti.gpudrivers.kona.api30/com.qualcomm.qti.gpudrivers.kona.api30.apk |NEW
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service |NEW
 vendor/bin/hw/android.hardware.camera.provider@2.4-service_64 |NEW
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti |NEW
@@ -65,27 +115,7 @@ vendor/bin/hw/android.hardware.lights-service.qti |NEW
 vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service |NEW
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service |NEW
 vendor/bin/hw/vendor.qti.hardware.display.composer-service |NEW
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service |NEW
-vendor/bin/ipacm-diag |NEW
-vendor/bin/loadalgo |NEW
-vendor/bin/mutualex |NEW
-vendor/bin/qtigetprop |NEW
-vendor/bin/qtisetprop |NEW
-vendor/bin/shsusrd |NEW
-vendor/bin/ssr_diag |NEW
-vendor/bin/ssr_setup |NEW
-vendor/bin/subsystem_ramdump |NEW
-vendor/bin/tloc_daemon |NEW
 vendor/bin/toucheventcheck |NEW
-vendor/bin/vendor.qti.hardware.soter@1.0-provision |NEW
-vendor/etc/audio_configs.xml |NEW
-vendor/etc/audio_configs_stock.xml |NEW
-vendor/etc/audio_effects.conf |NEW
-vendor/etc/audio_effects.xml |NEW
-vendor/etc/audio_io_policy.conf |NEW
-vendor/etc/audio_platform_info_intcodec.xml |NEW
-vendor/etc/audio_policy_volumes.xml |NEW
-vendor/etc/audio_tuning_mixer.txt |NEW
 vendor/etc/camera/102_SummerDay.png |NEW
 vendor/etc/camera/103_Fantasy.png |NEW
 vendor/etc/camera/104_Meet.png |NEW
@@ -100,31 +130,18 @@ vendor/etc/camera/112_CyberPunk.png |NEW
 vendor/etc/cirrus.cfg |NEW
 vendor/etc/cne/SwimConfig.xml |NEW
 vendor/etc/cne/andsfCne.xml |NEW
-vendor/etc/cne/mwqem.conf |NEW
-vendor/etc/cne/profileMwqem.xml |NEW
-vendor/etc/cne/profileSlm.xml |MISSING
-vendor/etc/cne/slm.conf |MISSING
 vendor/etc/cs35l41_cal.wav |NEW
 vendor/etc/device_features/umi.xml |NEW
 vendor/etc/dolby/dax-default.xml |NEW
 vendor/etc/flp.conf |NEW
-vendor/etc/gpfspath_oem_config.xml |NEW
 vendor/etc/gps.conf |NEW
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc |NEW
 vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc |NEW
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc |NEW
 vendor/etc/init/android.hardware.lights-qti.rc |NEW
-vendor/etc/init/init.embmssl_server.rc |NEW
-vendor/etc/init/init_thermal-engine.rc |NEW
-vendor/etc/init/ipacm-diag.rc |NEW
-vendor/etc/init/mutualex.rc |NEW
-vendor/etc/init/qmipriod.debug.rc |NEW
-vendor/etc/init/shsusrd.rc |NEW
-vendor/etc/init/tloc_daemon.rc |NEW
 vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc |NEW
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc |NEW
 vendor/etc/init/vendor.qti.hardware.display.composer-service.rc |NEW
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc |NEW
 vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-impl.so |NEW
 vendor/etc/libnfc-nci.conf |NEW
 vendor/etc/libnfc-nxp-pnscr.conf |NEW
@@ -136,19 +153,6 @@ vendor/etc/mdss_dsi_j2_mp_42_02_0b_dsc_cmd_mi.xml |NEW
 vendor/etc/mdss_dsi_j2_p2_1_38_0c_0a_dsc_cmd_mi.xml |NEW
 vendor/etc/mdss_dsi_j2_p2_1_42_02_0b_dsc_cmd_mi.xml |NEW
 vendor/etc/media_codecs_dolby_audio.xml |NEW
-vendor/etc/mixer_paths.xml |NEW
-vendor/etc/mixer_paths_overlay_dynamic.xml |NEW
-vendor/etc/mixer_paths_overlay_static.xml |NEW
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml |NEW
-vendor/etc/qmi_fw.conf |NEW
-vendor/etc/sensors/calibratedCheck.json |NEW
-vendor/etc/sensors/config/sns_dbtap.json |NEW
-vendor/etc/sensors/config/sns_oem13.json |NEW
-vendor/etc/sensors/config/sns_screen_down.json |NEW
-vendor/etc/sensors/proto/sns_direct_channel.proto |NEW
-vendor/etc/sensors/proto/sns_eqm.proto |NEW
-vendor/etc/sensors/proto/sns_oem15.proto |NEW
-vendor/etc/sensors/proto/sns_ois_manager.proto |NEW
 vendor/etc/sound_trigger_mixer_paths.xml |NEW
 vendor/etc/sound_trigger_platform_info.xml |NEW
 vendor/etc/thermal-india-camera.conf |NEW
@@ -156,10 +160,7 @@ vendor/etc/thermal-india-normal.conf |NEW
 vendor/etc/thermal-india-per-camera.conf |NEW
 vendor/etc/thermal-india-per-normal.conf |NEW
 vendor/etc/thermal-map-india.conf |NEW
-vendor/etc/thermal-per-camera.conf |NEW
-vendor/etc/thermal-per-class0.conf |NEW
 vendor/etc/thermal-per-navigation.conf |NEW
-vendor/etc/thermal-per-normal.conf |NEW
 vendor/etc/thermal-region-map.conf |NEW
 vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml |NEW
 vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml |NEW
@@ -172,30 +173,18 @@ vendor/lib/camera.device@3.5-external-impl.so |NEW
 vendor/lib/camera.device@3.5-impl.so |NEW
 vendor/lib/com.dsi.ant@1.0.so |NEW
 vendor/lib/com.qualcomm.qti.dpm.api@1.0.so |NEW
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so |NEW
 vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so |NEW
 vendor/lib/hw/android.hardware.gnss@2.1-impl-qti.so |NEW
-vendor/lib/hw/com.dsi.ant@1.0-impl.so |NEW
 vendor/lib/hw/fingerprint.goodix_fod.so |NEW
 vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so |NEW
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so |NEW
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so |NEW
-vendor/lib/libMpeghSwEnc.so |NEW
 vendor/lib/libOmxVdec.so |NEW
 vendor/lib/lib_aion_buffer.so |NEW
-vendor/lib/liba2dpoffload.so |NEW
-vendor/lib/libaudioalsa.so |NEW
 vendor/lib/libaudiocloudctrl.so |NEW
-vendor/lib/libaudioparsers.so |NEW
 vendor/lib/libbatching.so |NEW
-vendor/lib/libbluetooth_audio_session_qti_2_1.so |NEW
-vendor/lib/libbt-hidlclient.so |NEW
-vendor/lib/libbtnv.so |NEW
 vendor/lib/libcdsprpc_system.so |NEW
 vendor/lib/libdapparamstorage.so |NEW
 vendor/lib/libdeccfg.so |NEW
 vendor/lib/libdpmqmihal.so |NEW
-vendor/lib/libdrc.so |NEW
 vendor/lib/libgeofencing.so |NEW
 vendor/lib/libgnss.so |NEW
 vendor/lib/libgps.utils.so |NEW
@@ -204,43 +193,27 @@ vendor/lib/libhdcp2p2prov.so |NEW
 vendor/lib/libhdcpsrm.so |NEW
 vendor/lib/libloc_core.so |NEW
 vendor/lib/liblocation_api.so |NEW
-vendor/lib/libmdmdetect.so |NEW
 vendor/lib/libmm-hdcpmgr.so |NEW
 vendor/lib/libmmhardware.so |NEW
-vendor/lib/libmmosal.so |NEW
 vendor/lib/liboemcrypto.so |NEW
-vendor/lib/libopenvx.so |NEW
 vendor/lib/libpdmapper.so |NEW
 vendor/lib/libpdnotifier.so |NEW
 vendor/lib/libperfconfig.so |NEW
 vendor/lib/libperfgluelayer.so |NEW
 vendor/lib/libperfioctl.so |NEW
-vendor/lib/libqmi_csvt_srvc.so |NEW
-vendor/lib/libqmi_legacy.so |NEW
-vendor/lib/libqrtr.so |NEW
-vendor/lib/libqsocket.so |NEW
 vendor/lib/libqti-perfd.so |NEW
 vendor/lib/libqti-util.so |NEW
-vendor/lib/libresampler.so |NEW
-vendor/lib/libsmemlog.so |NEW
 vendor/lib/libsoc_helper.so |NEW
 vendor/lib/libsoc_helper_jni.so |NEW
 vendor/lib/libspkrprot.so |NEW
 vendor/lib/libstagefright_soft_ac4dec.so |NEW
 vendor/lib/libstagefright_soft_ddpdec.so |NEW
 vendor/lib/libstagefrightdolby.so |NEW
-vendor/lib/libsubsystem_control.so |NEW
-vendor/lib/libsurround_3mic_proc.so |NEW
-vendor/lib/libsystem_health_mon.so |NEW
-vendor/lib/libtinycompress.so |NEW
 vendor/lib/libtinyxml.so |NEW
 vendor/lib/libtrustedapploader.so |NEW
-vendor/lib/libvppimmotion.so |NEW
-vendor/lib/libvpptestutils.so |NEW
 vendor/lib/libwfdaac_vendor.so |NEW
 vendor/lib/libwvkeybox.so |NEW
 vendor/lib/mediadrm/libwvdrmengine.so |NEW
-vendor/lib/rfsa/adsp/hrtf5c.bin |NEW
 vendor/lib/soundfx/libvolumelistener.so?inline=false.1 |NEW
 vendor/lib/vendor.dolby.hardware.dms@1.0.so |NEW
 vendor/lib/vendor.dolby.hardware.dms@2.0.so |NEW
@@ -250,7 +223,6 @@ vendor/lib/vendor.qti.hardware.camera.device@2.0.so |NEW
 vendor/lib/vendor.qti.hardware.camera.device@3.5.so |NEW
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0.so |NEW
 vendor/lib/vendor.qti.hardware.fm@1.0.so |NEW
-vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so |NEW
 vendor/lib64/android.hardware.camera.provider@2.4-external.so |NEW
 vendor/lib64/android.hardware.camera.provider@2.4-legacy.so |NEW
 vendor/lib64/camera.device@1.0-impl.so |NEW
@@ -262,73 +234,37 @@ vendor/lib64/camera.device@3.5-external-impl.so |NEW
 vendor/lib64/camera.device@3.5-impl.so |NEW
 vendor/lib64/camera.device@3.6-external-impl.so |NEW
 vendor/lib64/com.dsi.ant@1.0.so |NEW
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so |NEW
-vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so |NEW
-vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so |NEW
-vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so |NEW
-vendor/lib64/com.qualcomm.qti.uceservice@2.0.so |NEW
-vendor/lib64/com.qualcomm.qti.uceservice@2.1.so |NEW
-vendor/lib64/com.qualcomm.qti.uceservice@2.2.so |NEW
-vendor/lib64/com.qualcomm.qti.uceservice@2.3.so |NEW
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so |NEW
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so |NEW
-vendor/lib64/hw/com.dsi.ant@1.0-impl.so |NEW
 vendor/lib64/hw/fingerprint.fpc_fod.default.so |NEW
 vendor/lib64/hw/fingerprint.fpc_fod.so |NEW
 vendor/lib64/hw/fingerprint.goodix_fod.default.so |NEW
 vendor/lib64/hw/fingerprint.goodix_fod.so |NEW
-vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so |MISSING
-
-
-
-vendor/lib64/libMpeghSwEnc.so |NEW
 vendor/lib64/libOmxVdec.so |NEW
 vendor/lib64/lib_aion_buffer.so |NEW
 vendor/lib64/liba2dpoffload.so |NEW
-vendor/lib64/libarcdualcamsat.so |NEW
-vendor/lib64/libarcmulticamsat.so |NEW
-vendor/lib64/libarcsat.so |NEW
 vendor/lib64/libaudioalsa.so |NEW
 vendor/lib64/libaudiocloudctrl.so |NEW
 vendor/lib64/libaudioparsers.so |NEW
 vendor/lib64/libbatching.so |NEW
-vendor/lib64/libbluetooth_audio_session_qti_2_1.so |NEW
-vendor/lib64/libbt-hidlclient.so |NEW
-vendor/lib64/libcacertclient.so |NEW
 vendor/lib64/libcdsprpc_system.so |NEW
 vendor/lib64/libdapparamstorage.so |NEW
 vendor/lib64/libdeccfg.so |NEW
 vendor/lib64/libdlbdsservice.so |NEW
-vendor/lib64/libembmsservice.so |NEW
-vendor/lib64/libflaw.so |NEW
 vendor/lib64/libgeofencing.so |NEW
 vendor/lib64/libgnss.so |NEW
 vendor/lib64/libgps.utils.so |NEW
-vendor/lib64/libhdrdynamic.so |NEW
-vendor/lib64/libhdrdynamicootf.so |NEW
-vendor/lib64/libjnihelper.so |NEW
-vendor/lib64/libloadalgo_stub.so |NEW
 vendor/lib64/libloc_core.so |NEW
 vendor/lib64/liblocation_api.so |NEW
-vendor/lib64/libmmosal.so |NEW
 vendor/lib64/libmulawdec.so |NEW
-vendor/lib64/libnative-api.so |NEW
 vendor/lib64/liboemaids_vendor.so |NEW
-vendor/lib64/libopenvx.so |NEW
-vendor/lib64/libqmi_csvt_srvc.so |NEW
-vendor/lib64/libqmi_legacy.so |NEW
-vendor/lib64/libqmiextservices.so |NEW
-vendor/lib64/libqsocket.so |NEW
 vendor/lib64/libresampler.so |NEW
 vendor/lib64/libspkrprot.so |NEW
 vendor/lib64/libstagefright_soft_ac4dec.so |NEW
 vendor/lib64/libstagefright_soft_ddpdec.so |NEW
 vendor/lib64/libstagefrightdolby.so |NEW
-
 vendor/lib64/libtinycompress.so |NEW
 vendor/lib64/libtinyxml.so |NEW
-vendor/lib64/libvppimmotion.so |NEW
-vendor/lib64/libvpptestutils.so |NEW
 vendor/lib64/libwpa_client.so |NEW
 vendor/lib64/se_nq_extn_client.so |NEW
 vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so |NEW
@@ -336,3 +272,87 @@ vendor/lib64/vendor.dolby.hardware.dms@1.0.so |NEW
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so |NEW
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so |NEW
 vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so |NEW
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so |NEW
+vendor/lib64/vendor.qti.hardware.camera.device@2.0.so |NEW
+vendor/lib64/vendor.qti.hardware.camera.device@3.5.so |NEW
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so |NEW
+vendor/lib64/vendor.qti.hardware.display.composer@3.0.so |NEW
+vendor/lib64/vendor.qti.hardware.fm@1.0.so |NEW
+# ACDB |MISSING
+# ACDB Loader |MISSING
+# ADSP |MISSING
+# ADSP Modules |MISSING
+# All blobs below are extracted - from umi_images_V12.5.3.0.RJBCNXM_20210331.0000.00_11.0_cn, unless pinned |MISSING
+# All unpinned blobs below are extracted from lmi-user 11 RKQ1.200826.002 V12.2.6.0.RJKMIXM release-keys |MISSING
+# Audio Libraries - Alioth |MISSING
+# Audio libraries |MISSING
+# Audio-Hardware |MISSING
+# Bluetooth (A2DP) |MISSING
+# CDSP |MISSING
+# Camera |MISSING
+# Camera Firmware |MISSING
+# Camera-arcsoft |MISSING
+# Camera-camerax |MISSING
+# Camera-components |MISSING
+# Camera-configs |MISSING
+# Charger |MISSING
+# Configstore |MISSING
+# Connection Security - LA.UM.9.12.r1-10800-SMxx50.0 |MISSING
+# Consumer IR |MISSING
+# DRM |MISSING
+# Display (HDR) |MISSING
+# Display (SDM) |MISSING
+# Display postprocessing |MISSING
+# Display-calibration-data |MISSING
+# ESE |MISSING
+# Feature enabler client |MISSING
+# Fingerprint |MISSING
+# Firmware |MISSING
+# GPS - LA.UM.9.12.r1-10800-SMxx50.0. |MISSING
+# Gatekeeper |MISSING
+# Graphics (Adreno firmware) |MISSING
+# Graphics (Adreno) |MISSING
+# Graphics (Vulkan) - from LA.UM.9.12.r1-14100-SMxx50.0 |MISSING
+# Graphics - from LA.UM.9.12.r1-14400-SMxx50.0 |MISSING
+# Hotword Enrollment - from MIUI V13.0.4.0.SJBMIXM |MISSING
+# IFAA |MISSING
+# IOP |MISSING
+# IPA Firmware |MISSING
+# IPA firmware |MISSING
+# IRQ balance |MISSING
+# Keystore |MISSING
+# Limits HAL |MISSING
+# Listen |MISSING
+# MDM - LA.UM.9.12.r1-10800-SMxx50.0 |MISSING
+# Media |MISSING
+# MiSys |MISSING
+# Mlipay |MISSING
+# NFC Firmware |MISSING
+# NVRAM |MISSING
+# OMX |MISSING
+# PD - LA.UM.9.12.r1-10800-SMxx50.0 |MISSING
+# Perf |MISSING
+# Peripheral manager |MISSING
+# Power-off alarm |MISSING
+# QCC |MISSING
+# QDMA - LA.UM.9.12.r1-10800-SMxx50.0 |MISSING
+# QSPM HAL - LA.UM.9.12.r1-10800-SMxx50.0 |MISSING
+# RIL |MISSING
+# RTP |MISSING
+# RemoteFS - LA.UM.9.12.r1-10800-SMxx50.0 |MISSING
+# Secure element |MISSING
+# Sensors |MISSING
+# Sensors-configs |MISSING
+# Snapdragon Computer Vision Engine |MISSING
+# Soundfx |MISSING
+# TFTP - LA.UM.9.12.r1-10800-SMxx50.0 |MISSING
+# Thermal |MISSING
+# Thermal engine |MISSING
+# Thermal-configs |MISSING
+# Time services |MISSING
+# Touchfeature |MISSING
+# Trusted User Interface |MISSING
+# Widevine DRM |MISSING
+# citsensorservice |MISSING
+vendor/app/com.qualcomm.qti.gpudrivers.kona.api30/com.qualcomm.qti.gpudrivers.kona.api30.apk;PRESIGNED |MISSING
+vendor/etc/cne/slm.conf |MISSING
