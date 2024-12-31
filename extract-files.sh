@@ -76,6 +76,10 @@ function blob_fixup() {
     esac
 }
 
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
+}
+
 if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"

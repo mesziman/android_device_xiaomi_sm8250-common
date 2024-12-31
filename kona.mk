@@ -8,7 +8,7 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 TARGET_BOARD_PLATFORM := kona
 BOARD_HAVE_QCOM_FM := false
-
+TARGET_PROVIDES_AUDIO_HAL := true
 # Overlays
 PRODUCT_PACKAGES += \
     SM8250CarrierConfig \
@@ -224,6 +224,7 @@ endif
 
 
 PRODUCT_PACKAGES += \
+		libudfpshandler \
     sensors.udfps
 
 
@@ -344,12 +345,14 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
+		dsprpcd \
     gps \
     keymaster \
     media \
     nfc \
     overlay \
     perf \
+		qseecomd \
     telephony \
     usb \
     wlan \
@@ -503,7 +506,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapmaxfree=48m
 
 #$(call inherit-product, vendor/xiaomi/cam_meta/cam_meta-vendor.mk)
-$(call inherit-product, vendor/xiaomi/cit/cit-vendor.mk)
+$(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
 
 # Surfaceflinger
 # Get non-open-source specific aspects.
