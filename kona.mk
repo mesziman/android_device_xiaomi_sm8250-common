@@ -199,7 +199,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.surface_flinger.support_kernel_idle_timer=true \
     ro.vendor.display.sensortype=2 \
     vendor.display.qdcm.mode_combine=1 \
-    vendor.display.use_layer_ext=0 
+    vendor.display.use_layer_ext=0
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk_platform \
