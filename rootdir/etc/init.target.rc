@@ -213,6 +213,20 @@ on boot
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_qca6390 qca_cld3_qca6490
     # Touchpanel
     chown system system /sys/touchpanel/double_tap
+    chown system system /sys/power/sum_wakeup_time
+    chmod 0660 /sys/power/sum_wakeup_time
+    chown system system /sys/power/last_wake_time
+    chmod 0660 /sys/power/last_wake_time
+    chown system system /sys/power/wake_times
+    chmod 0660 /sys/power/wake_times
+    chown system system /sys/power/screen_off_flag
+    chmod 0660 /sys/power/screen_off_flag
+    copy  /vendor/etc/tunings.txt /mnt/vendor/persist/vpp/tunings.txt
+    mkdir /mnt/vendor/persist/camera 0755 system cameraserver
+    # Lineage Health
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
 
 
 on property:vendor.display.lcd_density=560
