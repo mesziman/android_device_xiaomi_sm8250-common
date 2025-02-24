@@ -304,27 +304,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tunings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/tunings.txt
 
-# OMX
-PRODUCT_PACKAGES += \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxSwVencMpeg4 \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVdecHevc \
-    libOmxVenc \
-    libOmxVidEnc \
-    libOmxSwVdec \
-    libOmxSwVencMpeg4 \
-    libstagefrighthw \
-    libc2dcolorconvert \
-    liblasic
-
 # Paranoid Doze
 PRODUCT_PACKAGES += \
-    ParanoidDoze 
+    ParanoidDoze
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sensor.pickup=xiaomi.sensor.pickup \
@@ -356,6 +338,18 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wlan \
     wfd
 
+# Media
+TARGET_SUPPORTS_OMX_SERVICE := false
+
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.stagefright.c2inputsurface=-1 \
+    ro.odm.build.media_performance_class=30 \
+    vendor.media.omx=0
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+    $(LOCAL_PATH)/configs/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs.json
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
