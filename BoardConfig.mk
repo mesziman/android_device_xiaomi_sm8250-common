@@ -26,7 +26,7 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := true
 # Gestures
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 TARGET_USES_FOD_ZPOS := true
-
+TARGET_USES_EGL_DISPLAY_ARRAY := true
 KERNEL_DEFCONFIG := umi_defconfig
 KERNEL_LLVM_SUPPORT := true
 
