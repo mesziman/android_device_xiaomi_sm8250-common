@@ -136,10 +136,6 @@ ro.lmk.use_minfree_levels=true
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=15
 
-# Camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.xiaomi.cameratest,com.xiaomi.factory.mmi,com.android.camera
-#persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
-
 # DRM
 drm.service.enabled=true
 
