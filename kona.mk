@@ -194,6 +194,8 @@ PRODUCT_COPY_FILES += \
     ro.vendor.display.sensortype=2 \
     vendor.display.use_layer_ext=1
  # Display
+TARGET_USE_AIDL_QTI_MEMTRACK := true
+
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.sf.native_mode=0 \
     ro.surface_flinger.support_kernel_idle_timer=true \
