@@ -784,7 +784,7 @@ if [ "$ProductName" == "umi" ] || [ "$ProductName" == "aospa_umi" ] || [ "$Produ
       # Enable ZRAM
       configure_zram_parameters
       configure_read_ahead_kb_values
-      echo 160 > /proc/sys/vm/swappiness
+      echo 60 > /proc/sys/vm/swappiness
       echo 60 > /proc/sys/vm/direct_swappiness
       echo 0 > /proc/sys/vm/page-cluster
 else

@@ -159,6 +159,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 #TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 # Recovery
+BOARD_USES_FULL_RECOVERY_IMAGE := false
 ifeq ($(PRODUCT_VIRTUAL_AB_OTA),true)
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_AB.qcom
 else
