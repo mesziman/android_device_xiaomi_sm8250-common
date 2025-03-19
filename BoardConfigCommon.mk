@@ -153,13 +153,14 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := false
 
+TARGET_POWERSHARE_NODE := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless/reverse_chg_mode
+
 # Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 #TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 # Recovery
-BOARD_USES_FULL_RECOVERY_IMAGE := false
 ifeq ($(PRODUCT_VIRTUAL_AB_OTA),true)
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_AB.qcom
 else

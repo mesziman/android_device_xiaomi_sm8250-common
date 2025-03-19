@@ -136,6 +136,7 @@ on property:ro.boot.dp=0x0
 
 on boot
     chown system system /sys/class/touch/touch_dev/palm_sensor
+    chown system system /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless/reverse_chg_mode
     write /dev/cpuset/audio-app/cpus 0-7
     # Add a cpuset for the camera daemon
     # We want all cores for camera

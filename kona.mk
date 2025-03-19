@@ -487,6 +487,9 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
     vndk_package
 
+PRODUCT_PACKAGES += \
+		vendor.aospa.powershare-service
+
 PRODUCT_VENDOR_PROPERTIES += \
     pm.dexopt.ab-ota=speed-profile \
     dalvik.vm.dexopt.secondary=true \
