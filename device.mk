@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     AOSPAUmiFrameworks \
     AOSPAUmiSettings \
     AOSPAUmiSystemUI \
+		UmiAperture \
     UmiFrameworks \
 		UmiNfc \
     UmiSystemUI
@@ -28,11 +29,6 @@ TARGET_HAS_FOD := true
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
-
-
-# Display
-PRODUCT_COPY_FILES += \
-		$(LOCAL_PATH)/display_id_4630946545580055169.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946545580055169.xml
 
 # Audio configs
 PRODUCT_COPY_FILES += \
@@ -54,8 +50,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_engine_default_stream_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_default_stream_volumes.xml \
 		$(LOCAL_PATH)/audio/audio_policy_engine_product_strategies_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_product_strategies_mi.xml
 
+PRODUCT_PACKAGES += \
+    Aperture
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,org.lineageos.aperture \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.aperture
+
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/umi/umi-vendor.mk)
+$(call inherit-product, vendor/xiaomi/qseecomd/qseecomd-vendor.mk)
+$(call inherit-product, vendor/xiaomi/missingblobs/missingblobs-vendor.mk)
